@@ -1,0 +1,28 @@
+{
+    "Items": [
+        {
+            "Name": "a",
+            "Type": "",
+            "ModelPosition": "0, 0, 0",
+            "ModelRotation": "0, 0, 0",
+            "ModelScale": "0, 0, 0",
+            "Text": ""
+        },
+        {
+            "Name": "f",
+            "Type": "",
+            "ModelPosition": "0, 0, 0",
+            "ModelRotation": "0, 0, 0",
+            "ModelScale": "0, 0, 0",
+            "Text": ""
+        },
+        {
+            "Name": "d",
+            "Type": "",
+            "ModelPosition": "0, 0, 0",
+            "ModelRotation": "0, 0, 0",
+            "ModelScale": "0, 0, 0",
+            "Text": ""
+        }
+    ]
+}

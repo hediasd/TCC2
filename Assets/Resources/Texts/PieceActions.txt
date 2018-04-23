@@ -1,0 +1,32 @@
+{
+    "Items": [
+        {
+            "Name": "A1",
+            "RotationAmount": "0, 0, 30",
+            "RotationTime": "3",
+            "TranslationAmount": "0, 0, 0",
+            "TranslationTime": "7"
+        },
+        {
+            "Name": "A2",
+            "RotationAmount": "0, 90, 0",
+            "RotationTime": "4",
+            "TranslationAmount": "0, 0, 0",
+            "TranslationTime": "6"
+        },
+        {
+            "Name": "A3",
+            "RotationAmount": "0, 0, 0",
+            "RotationTime": "3",
+            "TranslationAmount": "0, 0, 6",
+            "TranslationTime": "2"
+        },
+        {
+            "Name": "",
+            "RotationAmount": "0, 0, 0",
+            "RotationTime": "5",
+            "TranslationAmount": "0, 0, 0",
+            "TranslationTime": "5"
+        }
+    ]
+}

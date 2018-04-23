@@ -1,0 +1,16 @@
+{
+    "Items": [
+        {
+            "Name": "Tomate",
+            "ModelNames": "A, B, C"
+        },
+        {
+            "Name": "Salada",
+            "ModelNames": "A, B, C"
+        },
+        {
+            "Name": "Alface",
+            "ModelNames": "A, B, C"
+        }
+    ]
+}

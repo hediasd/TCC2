@@ -1,0 +1,25 @@
+{
+    "Items": [
+        {
+            "Name": "E1",
+            "ComponentName": "montaj-gezer punta",
+            "SubComponentName": "gezer punta - tekerlek_1-1",
+            "Actions": "A1",
+            "Requisites": ""
+        },
+        {
+            "Name": "E2",
+            "ComponentName": "montaj-gezer punta",
+            "SubComponentName": "APERTO-PONTO-1",
+            "Actions": "A2",
+            "Requisites": ""
+        },
+        {
+            "Name": "E3",
+            "ComponentName": "montaj-gezer punta",
+            "SubComponentName": "gezer punta - mil-1",
+            "Actions": "A3",
+            "Requisites": ""
+        }
+    ]
+}

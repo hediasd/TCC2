@@ -1,0 +1,324 @@
+fileFormatVersion: 2
+guid: ee86c7b234ddf694b9770872b0eeabd8
+timeCreated: 1524012739
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: 3DGeom~135
+    100002: 3DGeom~136
+    100004: 3DGeom~155
+    100006: 3DGeom~156
+    100008: 3DGeom~348
+    100010: 3DGeom~349
+    100012: 3DGeom~429
+    100014: 3DGeom~430
+    100016: 3DGeom~431
+    100018: 3DGeom~559
+    100020: 3DGeom~560
+    100022: 3DGeom~59
+    100024: 3DGeom~60
+    100026: APERTO-PONTO-1
+    100028: araba 2_1-1
+    100030: araba3_1-1
+    100032: araba4_1-1
+    100034: araba4_1-2
+    100036: ayna-1
+    100038: Body_1
+    100040: Body_1 1
+    100042: Body_1_10
+    100044: Body_1_11
+    100046: Body_1_12
+    100048: Body_1_13
+    100050: Body_1_14
+    100052: Body_1_15
+    100054: Body_1_16
+    100056: Body_1_2
+    100058: Body_1_2 1
+    100060: Body_1_3
+    100062: Body_1_3 1
+    100064: Body_1_4
+    100066: Body_1_4 1
+    100068: Body_1_5
+    100070: Body_1_5 1
+    100072: Body_1_6
+    100074: Body_1_6 1
+    100076: Body_1_7
+    100078: Body_1_8
+    100080: Body_1_9
+    100082: CARRO TORRE-1
+    100084: Default Camera 1
+    100086: ESTRUTURA-PONTO-1
+    100088: ESTRUTURA-TORNO-1
+    100090: gezer punta - mil-1
+    100092: gezer punta - tekerlek_1-1
+    100094: Ground
+    100096: kalemlik_1-1
+    100098: MONTAGEM-TORRE-1
+    100100: montaj-gezer punta-1
+    100102: tak_m montaj-1
+    100104: tak_m tutucu-1
+    100106: tak_m-1
+    100108: //RootNode
+    100110: TORNO-MONTAGEM-V01
+    100112: vida_1-1
+    100114: vida_1-2
+    100116: vida_1-3
+    100118: vida_1-4
+    100120: vida_1-5
+    100122: vida_1-6
+    100124: vida_1-7
+    100126: vida_1-8
+    400000: 3DGeom~135
+    400002: 3DGeom~136
+    400004: 3DGeom~155
+    400006: 3DGeom~156
+    400008: 3DGeom~348
+    400010: 3DGeom~349
+    400012: 3DGeom~429
+    400014: 3DGeom~430
+    400016: 3DGeom~431
+    400018: 3DGeom~559
+    400020: 3DGeom~560
+    400022: 3DGeom~59
+    400024: 3DGeom~60
+    400026: APERTO-PONTO-1
+    400028: araba 2_1-1
+    400030: araba3_1-1
+    400032: araba4_1-1
+    400034: araba4_1-2
+    400036: ayna-1
+    400038: Body_1
+    400040: Body_1 1
+    400042: Body_1_10
+    400044: Body_1_11
+    400046: Body_1_12
+    400048: Body_1_13
+    400050: Body_1_14
+    400052: Body_1_15
+    400054: Body_1_16
+    400056: Body_1_2
+    400058: Body_1_2 1
+    400060: Body_1_3
+    400062: Body_1_3 1
+    400064: Body_1_4
+    400066: Body_1_4 1
+    400068: Body_1_5
+    400070: Body_1_5 1
+    400072: Body_1_6
+    400074: Body_1_6 1
+    400076: Body_1_7
+    400078: Body_1_8
+    400080: Body_1_9
+    400082: CARRO TORRE-1
+    400084: Default Camera 1
+    400086: ESTRUTURA-PONTO-1
+    400088: ESTRUTURA-TORNO-1
+    400090: gezer punta - mil-1
+    400092: gezer punta - tekerlek_1-1
+    400094: Ground
+    400096: kalemlik_1-1
+    400098: MONTAGEM-TORRE-1
+    400100: montaj-gezer punta-1
+    400102: tak_m montaj-1
+    400104: tak_m tutucu-1
+    400106: tak_m-1
+    400108: TORNO-MONTAGEM-V01
+    400110: //RootNode
+    400112: vida_1-1
+    400114: vida_1-2
+    400116: vida_1-3
+    400118: vida_1-4
+    400120: vida_1-5
+    400122: vida_1-6
+    400124: vida_1-7
+    400126: vida_1-8
+    2000000: Default Camera 1
+    2100000: Mtl
+    2100002: Mtl1
+    2100004: Mtl2
+    2100006: Mtl3
+    2100008: Mtl4
+    2100010: Mtl5
+    2100012: Mtl6
+    2100014: Mtl8
+    2100016: Mtla
+    2100018: Mtl10
+    2100020: Mtl12
+    2100022: Mtl14
+    2100024: Mtl13
+    2100026: Mtl16
+    2100028: Mtl18
+    2100030: Mtl1a
+    2100032: Mtl19
+    2100034: Mtl1b
+    2100036: Mtl21
+    2100038: Mtl23
+    2100040: Mtl22
+    2300000: 3DGeom~135
+    2300002: 3DGeom~136
+    2300004: 3DGeom~155
+    2300006: 3DGeom~156
+    2300008: 3DGeom~348
+    2300010: 3DGeom~349
+    2300012: 3DGeom~429
+    2300014: 3DGeom~430
+    2300016: 3DGeom~431
+    2300018: 3DGeom~559
+    2300020: 3DGeom~560
+    2300022: 3DGeom~59
+    2300024: 3DGeom~60
+    2300026: Body_1 1
+    2300028: Body_1_10
+    2300030: Body_1_11
+    2300032: Body_1_12
+    2300034: Body_1_13
+    2300036: Body_1_14
+    2300038: Body_1_15
+    2300040: Body_1_16
+    2300042: Body_1_2 1
+    2300044: Body_1_3 1
+    2300046: Body_1_4
+    2300048: Body_1_5
+    2300050: Body_1_6 1
+    2300052: Body_1_7
+    2300054: Body_1_8
+    2300056: Body_1_9
+    3300000: 3DGeom~135
+    3300002: 3DGeom~136
+    3300004: 3DGeom~155
+    3300006: 3DGeom~156
+    3300008: 3DGeom~348
+    3300010: 3DGeom~349
+    3300012: 3DGeom~429
+    3300014: 3DGeom~430
+    3300016: 3DGeom~431
+    3300018: 3DGeom~559
+    3300020: 3DGeom~560
+    3300022: 3DGeom~59
+    3300024: 3DGeom~60
+    3300026: Body_1 1
+    3300028: Body_1_10
+    3300030: Body_1_11
+    3300032: Body_1_12
+    3300034: Body_1_13
+    3300036: Body_1_14
+    3300038: Body_1_15
+    3300040: Body_1_16
+    3300042: Body_1_2 1
+    3300044: Body_1_3 1
+    3300046: Body_1_4
+    3300048: Body_1_5
+    3300050: Body_1_6 1
+    3300052: Body_1_7
+    3300054: Body_1_8
+    3300056: Body_1_9
+    4300000: 3DGeom~59
+    4300002: 3DGeom~60
+    4300004: 3DGeom~135
+    4300006: 3DGeom~136
+    4300008: 3DGeom~155
+    4300010: 3DGeom~156
+    4300012: Body_1
+    4300014: Body_1_2
+    4300016: Body_1_3
+    4300018: Body_1_4
+    4300020: Body_1_5
+    4300022: Body_1_6
+    4300024: Body_1_7
+    4300026: Body_1_8
+    4300028: Body_1_9
+    4300030: Body_1_10
+    4300032: Body_1_11
+    4300034: Body_1_12
+    4300036: Body_1_13
+    4300038: 3DGeom~348
+    4300040: 3DGeom~349
+    4300042: Body_1_14
+    4300044: Body_1_15
+    4300046: 3DGeom~429
+    4300048: 3DGeom~430
+    4300050: 3DGeom~431
+    4300052: Body_1_16
+    4300054: 3DGeom~559
+    4300056: 3DGeom~560
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
