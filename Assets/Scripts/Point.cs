@@ -13,21 +13,11 @@ public class LinkedPoint : Point{
 	}
 }
 
-public class PointDuo {
-	Point One, Two;
-	public PointDuo(Point a, Point b){
-		One = a;
-		Two = b;
-	}
-	public static bool operator == (PointDuo pa, PointDuo pb){
-		if(((object) pa == null) || ((object) pb == null)) return ((object) pa == (object) pb);
-		return ((pa.One == pb.One) && (pa.Two == pb.Two));
-	}
-	public static bool operator != (PointDuo pa, PointDuo pb){
-		if(((object) pa == null) || ((object) pb == null)) return ((object) pa == (object) pb);
-		return ((pa.One == pb.One) && (pa.Two == pb.Two));
-	}
-}
+//facda5//fcd47e
+        //f47200
+        //ffffb4
+        //e36c13
+        //ffb313
 
 public class Point {
 	public int x;

@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class PieceEventManager : MonoBehaviour {
 
-	public PieceEvent OngoingEvent;
-	public bool ok = false;
+	bool ShowingModel = false;
+	bool ShowingButtons = false;
+	bool ShowingWarnings = false;
+
+	public PieceEvent OngoingManagerEvent;
 	List<PieceEvent> PieceEvents;
 
-	public int Index, MaxIndex;
 
+	public int Index, MaxIndex;
 
 	void Start () {
 		PieceEvents = new List<PieceEvent>();
@@ -19,7 +22,7 @@ public class PieceEventManager : MonoBehaviour {
 		PieceEvents.Add(ResourcesMaster.PieceEvents[1]);
 		PieceEvents.Add(ResourcesMaster.PieceEvents[2]);
 
-		OngoingEvent = PieceEvents[0];
+		OngoingManagerEvent = PieceEvents[0];
 
 		Index = 0;
 		MaxIndex = PieceEvents.Count - 1;
@@ -28,20 +31,19 @@ public class PieceEventManager : MonoBehaviour {
 		{
 			PE.FullyLoad();
 		}
-
 		//GameObject.Find("Text").GetComponent<Text>().text = "aaaa" + PieceEvents[0];
-		ok = true;
+		
 	}
 
 	public void PlayEvent(){
 
-		OngoingEvent = PieceEvents[Index];
-		GameObject Piece = transform.Find("Model").Find(OngoingEvent.ComponentName).Find(OngoingEvent.SubComponentName).GetChild(0).gameObject;
+		OngoingManagerEvent = PieceEvents[Index];
+		GameObject Piece = transform.Find("Model").Find(OngoingManagerEvent.ComponentName).Find(OngoingManagerEvent.SubComponentName).GetChild(0).gameObject;
 
 
-		foreach (PieceAction PA in OngoingEvent.PieceActions)
+		foreach (PieceAction PA in OngoingManagerEvent.PieceActions)
 		{
-			Debug.Log("Playing event "+OngoingEvent.Name + " " + PA.Name + " " + PA.TranslationAmountVector + " " +float.Parse(PA.TranslationTime)) ;
+			Debug.Log("Playing event "+OngoingManagerEvent.Name + " " + PA.Name + " " + PA.TranslationAmountVector + " " +float.Parse(PA.TranslationTime)) ;
 
 			if(PA.TranslationAmountVector != Vector3.zero && float.Parse(PA.TranslationTime) > 0){
 				Move MoveScript = Piece.AddComponent<Move>();
@@ -55,11 +57,27 @@ public class PieceEventManager : MonoBehaviour {
 
 	}
 	public void NextEvent(){
-
+		
 	}
 
+	public void Enableds(bool s1, bool s2, bool s3){
+		EnabledModel(s1);
+		EnabledButtons(s2);
+		EnabledWarnings(s3);
+	}
+	public void EnabledModel(bool state){
+		ShowingModel = state;
+		transform.Find("Model").gameObject.SetActive(state);
+	}
 	public void EnabledButtons(bool state){
+		ShowingButtons = state;
 		transform.Find("Buttons").gameObject.SetActive(state);
 	}
+	public void EnabledWarnings(bool state){
+		ShowingWarnings = state;
+		transform.Find("Warnings").gameObject.SetActive(state);
+	}
+
+	
 
 }

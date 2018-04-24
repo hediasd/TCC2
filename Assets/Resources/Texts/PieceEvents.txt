@@ -20,6 +20,13 @@
             "SubComponentName": "gezer punta - mil-1",
             "Actions": "A3",
             "Requisites": ""
+        },
+        {
+            "Name": "E4",
+            "ComponentName": "MONTAGEM-TORRE-1",
+            "SubComponentName": "gezer punta - mil-1",
+            "Actions": "A3",
+            "Requisites": ""
         }
     ]
 }

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="reidecopas" size="1.000000 1.278810" />
+    <ImageTarget name="Logotipo1" size="3.000000 1.017279" />
     <ImageTarget name="Salada" size="1.000000 1.000000" />
     <ImageTarget name="Tomate" size="1.000000 1.000000" />
     <ImageTarget name="Alface" size="1.000000 1.000000" />
     <ImageTarget name="Abacate" size="1.000000 1.000000" />
+    <ImageTarget name="11" size="0.400000 0.400000" />
+    <ImageTarget name="chaosgallant" size="0.500000 0.666667" />
+    <ImageTarget name="1" size="1.000000 1.000000" />
   </Tracking>
 </QCARConfig>

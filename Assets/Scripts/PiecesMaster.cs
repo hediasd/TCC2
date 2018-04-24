@@ -13,12 +13,23 @@ public class PiecesMaster : MonoBehaviour {
 	void Start() {
 
 		ModelsFather = GameObject.Find("ModelsFather").transform;
-
-		int AxisControl = 3;
 		Object TagBase = Resources.Load("Models/TagBase2");
 		Object ButtonsBase = Resources.Load("Models/ButtonsBase");
 
-		/* foreach (TrackedTag Tag in ResourcesMaster.TrackedTagsDictionary.Values)
+		for (int i = 0; i < ModelsFather.transform.childCount; i++)
+		{
+			//TargetedModels.Add(ModelsFather.GetChild(i).gameObject.name, ModelsFather.GetChild(i).gameObject);
+		}
+
+
+
+	}
+
+	void Update(){
+		
+	}
+
+	/* foreach (TrackedTag Tag in ResourcesMaster.TrackedTagsDictionary.Values)
 		{
 			GameObject InstanceT = Instantiate(TagBase, new Vector3(AxisControl, 0, 0), Quaternion.identity) as GameObject;
 			//GameObject InstanceB = Instantiate(ButtonsBase, InstanceT.transform.position + new Vector3(-0.2f, 0, -0.2f), Quaternion.identity) as GameObject;
@@ -36,18 +47,6 @@ public class PiecesMaster : MonoBehaviour {
 			break;
 		} */
 		//PieceEventManager Pve = Piece.AddComponent<PieceEventManager>();
-		for (int i = 0; i < ModelsFather.transform.childCount; i++)
-		{
-			//TargetedModels.Add(ModelsFather.GetChild(i).gameObject.name, ModelsFather.GetChild(i).gameObject);
-		}
-
-
-
-	}
-
-	void Update(){
-		
-	}
 
 
 

@@ -20,7 +20,8 @@ public class ResourcesMaster : MonoBehaviour
     public static Dictionary<string, PieceAction> PieceActionsDictionary;
 
     public static List<PieceAction> PieceActions;
-    public static List<PieceEvent> PieceEvents ;
+    public static List<PieceEvent> PieceEvents;
+    public static SceneSetup SceneSetup;
 
 
     public static Dictionary<string, PieceModelObject> PieceModelObjectsDictionary;
@@ -30,6 +31,37 @@ public class ResourcesMaster : MonoBehaviour
 
     public static Dictionary<string, Material> Materials;
 
+    void Start()
+    {
+
+        // PieceActionsDictionary = new Dictionary<string, PieceAction>();//LoadTextResource<PieceAction>();
+        //  PieceEventsDictionary = new Dictionary<string, PieceEvent>();//LoadTextResource<PieceEvent>();
+        //PieceModelObjectsDictionary = LoadTextResource<PieceModelObject>();
+        //PieceModelTextPanelsDictionary = LoadTextResource<PieceModelTextPanel>();
+        //TrackedTagsDictionary = LoadTextResource<TrackedTag>();
+
+        //PieceModelTextPanelsDictionary.Values.ForEach(pm => pm.ModelType = "PieceModelTextPanel");
+
+        PieceActions = ResourcesMaster.JsonToList<PieceAction>("PieceActions");
+        string lcsp = ResourcesMaster.ListToJson<PieceAction>(PieceActions);
+        foreach (PieceAction pa in PieceActions)
+        {
+            //PieceActionsDictionary.Add(pa.Name, pa);
+        }
+		//ResourcesMaster.WriteUp("PieceActions", lcsp);
+
+        PieceEvents = ResourcesMaster.JsonToList<PieceEvent>("PieceEvents");
+        string lsp = ResourcesMaster.ListToJson<PieceEvent>(PieceEvents);
+        foreach (PieceEvent pa in PieceEvents)
+        {
+            //PieceEventsDictionary.Add(pa.Name, pa);
+        }
+		//ResourcesMaster.WriteUp("PieceEvents", lsp);
+
+        SceneSetup = ResourcesMaster.JsonToObject<SceneSetup>("SceneSetup");     
+        
+    }
+
     Dictionary<string, T> LoadTextResource<T>() where T : LoadableResource
     {
         Dictionary<string, T> Dictionary = new Dictionary<string, T>();
@@ -37,7 +69,7 @@ public class ResourcesMaster : MonoBehaviour
         //Debug.Log(TypeName);
 
         List<T> LoadedList = ResourcesMaster.JsonToList<T>(TypeName);
-		string liststring = ResourcesMaster.ListToJson<T>(LoadedList, true);
+		string liststring = ResourcesMaster.ListToJson<T>(LoadedList);
 		ResourcesMaster.WriteUp(TypeName, liststring);
 
         string s = TypeName + " ";
@@ -58,46 +90,6 @@ public class ResourcesMaster : MonoBehaviour
         return Dictionary;
     }
 
-
-    void Update()
-    {
-
-    }
-
-    void Start()
-    {
-
-       // PieceActionsDictionary = new Dictionary<string, PieceAction>();//LoadTextResource<PieceAction>();
-      //  PieceEventsDictionary = new Dictionary<string, PieceEvent>();//LoadTextResource<PieceEvent>();
-        //PieceModelObjectsDictionary = LoadTextResource<PieceModelObject>();
-        //PieceModelTextPanelsDictionary = LoadTextResource<PieceModelTextPanel>();
-        //TrackedTagsDictionary = LoadTextResource<TrackedTag>();
-
-
-
-        //PieceModelTextPanelsDictionary.Values.ForEach(pm => pm.ModelType = "PieceModelTextPanel");
-
-        PieceActions = ResourcesMaster.JsonToList<PieceAction>("PieceActions");
-        string lcsp = ResourcesMaster.ListToJson<PieceAction>(PieceActions, true);
-        foreach (PieceAction pa in PieceActions)
-        {
-            //PieceActionsDictionary.Add(pa.Name, pa);
-        }
-		//ResourcesMaster.WriteUp("PieceActions", lcsp);
-
-        PieceEvents = ResourcesMaster.JsonToList<PieceEvent>("PieceEvents");
-        string lsp = ResourcesMaster.ListToJson<PieceEvent>(PieceEvents, true);
-        foreach (PieceEvent pa in PieceEvents)
-        {
-            //PieceEventsDictionary.Add(pa.Name, pa);
-        }
-		//ResourcesMaster.WriteUp("PieceEvents", lsp);
-
-
-        
-        
-    }
-
     void LoadMaterials()
     {
 
@@ -113,20 +105,23 @@ public class ResourcesMaster : MonoBehaviour
         return things;
     }
 
-    /*   public static string ToJson<T>(T[] array, bool prettyPrint)
-        {
-            Wrapper<T> wrapper = new Wrapper<T>();
-            wrapper.Items = array;
-            return JsonUtility.ToJson(wrapper, prettyPrint);
-        }
-    */
-    
-	public static string ListToJson<T>(List<T> list, bool prettyPrint)
+	public static string ListToJson<T>(List<T> list)
     {
         Wrapper<T> wrapper = new Wrapper<T>();
         wrapper.Items = list.ToArray();
-        return JsonUtility.ToJson(wrapper, prettyPrint);
+        return JsonUtility.ToJson(wrapper, true);
     }
+
+    public static T JsonToObject<T>(string file)
+    {
+        TextAsset textAsset = (TextAsset)Resources.Load("Texts/"+file, typeof(TextAsset));
+        return JsonUtility.FromJson<T>(textAsset.text);
+    }    
+    public static string ObjectToJson<T>(T stuff)
+    {
+        return JsonUtility.ToJson(stuff, true);
+    }
+    
 
 /*   public static string JsonToList<T>(string line)
     {

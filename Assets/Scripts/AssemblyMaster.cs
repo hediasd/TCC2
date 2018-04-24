@@ -8,21 +8,27 @@ public class AssemblyMaster : MonoBehaviour {
 	PiecesMaster PiecesMaster;
 	Transform ModelsFather;
 
-	List<PieceEventManager> EventManagers;
+	List<PieceEventManager> PieceEventManagers;
+	PieceEvent OngoingGlobalEvent;
 
 	void Start(){
 
-		EventManagers = new List<PieceEventManager>();
+		PieceEventManagers = new List<PieceEventManager>();
 	
 		PiecesMaster = GetComponent<PiecesMaster>();
 		ModelsFather = GameObject.Find("ModelsFather").transform;
 
 		foreach (Transform Model in ModelsFather)
 		{
-			EventManagers.Add(Model.GetComponent<PieceEventManager>());				
+			PieceEventManager PEM = Model.GetComponent<PieceEventManager>();
+			PEM.Enableds(false, false, true);
+			PieceEventManagers.Add(PEM);	
+
 		}
 
-		EventManagers[0].EnabledButtons(true);
+		PieceEventManagers[0].Enableds(true, true, false);
+		OngoingGlobalEvent = PieceEventManagers[0].OngoingManagerEvent;
+
 
 
 	}
@@ -30,7 +36,6 @@ public class AssemblyMaster : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//Debug.Log(TrackerManager.)
 		
 	}
 
@@ -38,26 +43,23 @@ public class AssemblyMaster : MonoBehaviour {
 		if(PVE.Index > 0) {
 			PVE.Index--;
 			PVE.PlayEvent();
-		}else if(EventManagers.IndexOf(PVE) > 0){
-			PVE.EnabledButtons(false);
-			EventManagers[EventManagers.IndexOf(PVE) - 1].EnabledButtons(true);
+		}else if(PieceEventManagers.IndexOf(PVE) > 0){
+			PVE.Enableds(false, false, true);
+			PieceEventManagers[PieceEventManagers.IndexOf(PVE) - 1].Enableds(true, true, false);
 		}
 	}
 
 	public void PlayEvent(PieceEventManager PVE){
-
 		PVE.PlayEvent();
-
-
 	}
 
 	public void NextEvent(PieceEventManager PVE){
 		if(PVE.Index < PVE.MaxIndex) {
 			PVE.Index++;
 			PVE.PlayEvent();
-		}else if(EventManagers.IndexOf(PVE) < EventManagers.Count-1){
-			PVE.EnabledButtons(false);
-			EventManagers[EventManagers.IndexOf(PVE) + 1].EnabledButtons(true);
+		}else if(PieceEventManagers.IndexOf(PVE) < PieceEventManagers.Count-1){
+			PVE.Enableds(false, false, true);
+			PieceEventManagers[PieceEventManagers.IndexOf(PVE) + 1].Enableds(true, true, false);
 		}
 
 
