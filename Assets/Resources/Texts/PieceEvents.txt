@@ -24,8 +24,43 @@
         {
             "Name": "E4",
             "ComponentName": "MONTAGEM-TORRE-1",
-            "SubComponentName": "gezer punta - mil-1",
+            "SubComponentName": "araba4_1-1",
+            "Actions": "A1",
+            "Requisites": ""
+        },
+        {
+            "Name": "E5",
+            "ComponentName": "MONTAGEM-TORRE-1",
+            "SubComponentName": "araba4_1-2",
+            "Actions": "A1",
+            "Requisites": ""
+        },
+        {
+            "Name": "E6",
+            "ComponentName": "MONTAGEM-TORRE-1",
+            "SubComponentName": "kalemlik_1-1",
             "Actions": "A3",
+            "Requisites": ""
+        },
+        {
+            "Name": "E7",
+            "ComponentName": "ESTRUTURA-TORNO-1",
+            "SubComponentName": "gezer punta - mil-1",
+            "Actions": "",
+            "Requisites": ""
+        },
+        {
+            "Name": "E8",
+            "ComponentName": "ESTRUTURA-TORNO-1",
+            "SubComponentName": "gezer punta - mil-1",
+            "Actions": "",
+            "Requisites": ""
+        },
+        {
+            "Name": "E9",
+            "ComponentName": "ESTRUTURA-TORNO-1",
+            "SubComponentName": "gezer punta - mil-1",
+            "Actions": "",
             "Requisites": ""
         }
     ]

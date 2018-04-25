@@ -9,8 +9,8 @@
         },
         {
             "Name": "A2",
-            "RotationAmount": "0, 90, 0",
-            "RotationTime": "4",
+            "RotationAmount": "0, 60, 0",
+            "RotationTime": "3",
             "TranslationAmount": "0, 0, 0",
             "TranslationTime": "6"
         },
@@ -22,9 +22,9 @@
             "TranslationTime": "2"
         },
         {
-            "Name": "",
-            "RotationAmount": "0, 0, 0",
-            "RotationTime": "5",
+            "Name": "A4",
+            "RotationAmount": "40, 0, 0",
+            "RotationTime": "3",
             "TranslationAmount": "0, 0, 0",
             "TranslationTime": "5"
         }

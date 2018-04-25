@@ -12,7 +12,7 @@ using System.Collections;
 public class ViewTrigger : MonoBehaviour
 {
 
-    public float activationTime = 1.5f;
+    float activationTime = 1;
     public Material focusedMaterial;
     public Material nonFocusedMaterial;
     public bool Focused { get; set; }

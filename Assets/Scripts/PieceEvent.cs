@@ -36,7 +36,7 @@ public class PieceEvent : LoadableResource {
             if(pa != null && pa.Name.Equals(sv[0])){
                 PieceActions.Add(pa);
             }else{
-                Debug.Log("Null Action");
+                //Debug.Log("Null Action");
             }
         }
     

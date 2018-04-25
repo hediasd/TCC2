@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class SceneSetup : LoadableResource {
 
 	//public string TrackedTags = "Tomate, Salada";
-	public string EventOrder = "E1, E2, E3, E4";
+	public List<TrackedTag> TrackedTags;
+
+	public SceneSetup(){
+		TrackedTags = new List<TrackedTag>();
+		
+	}
 
 }

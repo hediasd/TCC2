@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
@@ -8,7 +8,8 @@ public class AssemblyMaster : MonoBehaviour {
 	PiecesMaster PiecesMaster;
 	Transform ModelsFather;
 
-	List<PieceEventManager> PieceEventManagers;
+	public List<PieceEventManager> PieceEventManagers;
+	public static int PVEIndex = 0;
 	PieceEvent OngoingGlobalEvent;
 
 	void Start(){
@@ -29,8 +30,6 @@ public class AssemblyMaster : MonoBehaviour {
 		PieceEventManagers[0].Enableds(true, true, false);
 		OngoingGlobalEvent = PieceEventManagers[0].OngoingManagerEvent;
 
-
-
 	}
 	
 	// Update is called once per frame
@@ -41,23 +40,39 @@ public class AssemblyMaster : MonoBehaviour {
 
 	public void PreviousEvent(PieceEventManager PVE){
 		if(PVE.Index > 0) {
-			PVE.Index--;
-			PVE.PlayEvent();
+			try{
+				PVE.Index--;
+				PVE.PlayEvent();
+			}catch(Exception e){
+				PVE.Index++;
+				Debug.Log(e.Message);
+			}	
 		}else if(PieceEventManagers.IndexOf(PVE) > 0){
+			PVEIndex--;
 			PVE.Enableds(false, false, true);
 			PieceEventManagers[PieceEventManagers.IndexOf(PVE) - 1].Enableds(true, true, false);
 		}
 	}
 
 	public void PlayEvent(PieceEventManager PVE){
-		PVE.PlayEvent();
+		try{
+			PVE.PlayEvent();
+		}catch(Exception e){
+			Debug.Log(e.Message);
+		}
 	}
 
 	public void NextEvent(PieceEventManager PVE){
 		if(PVE.Index < PVE.MaxIndex) {
-			PVE.Index++;
-			PVE.PlayEvent();
+			try{
+				PVE.Index++;
+				PVE.PlayEvent();
+			}catch(Exception e){
+				PVE.Index--;
+				Debug.Log(e.Message);
+			}			
 		}else if(PieceEventManagers.IndexOf(PVE) < PieceEventManagers.Count-1){
+			PVEIndex++;
 			PVE.Enableds(false, false, true);
 			PieceEventManagers[PieceEventManagers.IndexOf(PVE) + 1].Enableds(true, true, false);
 		}

@@ -21,6 +21,7 @@ public class ResourcesMaster : MonoBehaviour
 
     public static List<PieceAction> PieceActions;
     public static List<PieceEvent> PieceEvents;
+    public static int EventsIndex;
     public static SceneSetup SceneSetup;
 
 
@@ -59,6 +60,8 @@ public class ResourcesMaster : MonoBehaviour
 		//ResourcesMaster.WriteUp("PieceEvents", lsp);
 
         SceneSetup = ResourcesMaster.JsonToObject<SceneSetup>("SceneSetup");     
+
+        Debug.Log("Count " + PieceEvents.Count);
         
     }
 

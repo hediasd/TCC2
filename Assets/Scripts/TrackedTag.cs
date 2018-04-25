@@ -6,12 +6,12 @@ using UnityEngine;
 public class TrackedTag : LoadableResource {
 
 	public string ModelNames = "A, B, C";
-
-	[System.NonSerialized]
-	public List<PieceModel> Models;
+	public PieceModel Model;
+	public List<PieceEvent> PieceEvents;
 
 	public TrackedTag(){
-		Models = new List<PieceModel>();
+		Model = new PieceModel();
+		PieceEvents = new List<PieceEvent>();
 	}
 
 }

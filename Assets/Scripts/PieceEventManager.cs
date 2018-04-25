@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,9 +18,12 @@ public class PieceEventManager : MonoBehaviour {
 	void Start () {
 		PieceEvents = new List<PieceEvent>();
 
-		PieceEvents.Add(ResourcesMaster.PieceEvents[0]);
-		PieceEvents.Add(ResourcesMaster.PieceEvents[1]);
-		PieceEvents.Add(ResourcesMaster.PieceEvents[2]);
+		int a = (int.Parse(this.gameObject.name) * 3);
+
+		for (int i = a-3; i < a; i++)
+		{
+			PieceEvents.Add(ResourcesMaster.PieceEvents[i]);
+		}
 
 		OngoingManagerEvent = PieceEvents[0];
 
@@ -38,8 +41,8 @@ public class PieceEventManager : MonoBehaviour {
 	public void PlayEvent(){
 
 		OngoingManagerEvent = PieceEvents[Index];
-		GameObject Piece = transform.Find("Model").Find(OngoingManagerEvent.ComponentName).Find(OngoingManagerEvent.SubComponentName).GetChild(0).gameObject;
 
+		GameObject Piece = transform.Find("Model").Find(OngoingManagerEvent.ComponentName).Find(OngoingManagerEvent.SubComponentName).GetChild(0).gameObject;
 
 		foreach (PieceAction PA in OngoingManagerEvent.PieceActions)
 		{
