@@ -2,64 +2,64 @@
     "Items": [
         {
             "Name": "E1",
-            "ComponentName": "montaj-gezer punta",
-            "SubComponentName": "gezer punta - tekerlek_1-1",
+            "ComponentNames": "montaj-gezer punta",
+            "SubComponentNames": "gezer punta - tekerlek_1-1",
             "Actions": "A1",
             "Requisites": ""
         },
         {
             "Name": "E2",
-            "ComponentName": "montaj-gezer punta",
-            "SubComponentName": "APERTO-PONTO-1",
+            "ComponentNames": "montaj-gezer punta",
+            "SubComponentNames": "APERTO-PONTO-1",
             "Actions": "A2",
             "Requisites": ""
         },
         {
             "Name": "E3",
-            "ComponentName": "montaj-gezer punta",
-            "SubComponentName": "gezer punta - mil-1",
+            "ComponentNames": "montaj-gezer punta",
+            "SubComponentNames": "gezer punta - mil-1",
             "Actions": "A3",
             "Requisites": ""
         },
         {
             "Name": "E4",
-            "ComponentName": "MONTAGEM-TORRE-1",
-            "SubComponentName": "araba4_1-1",
+            "ComponentNames": "MONTAGEM-TORRE-1",
+            "SubComponentNames": "araba4_1-1",
             "Actions": "A1",
             "Requisites": ""
         },
         {
             "Name": "E5",
-            "ComponentName": "MONTAGEM-TORRE-1",
-            "SubComponentName": "araba4_1-2",
+            "ComponentNames": "MONTAGEM-TORRE-1",
+            "SubComponentNames": "araba4_1-2",
             "Actions": "A1",
             "Requisites": ""
         },
         {
             "Name": "E6",
-            "ComponentName": "MONTAGEM-TORRE-1",
-            "SubComponentName": "kalemlik_1-1",
+            "ComponentNames": "MONTAGEM-TORRE-1",
+            "SubComponentNames": "kalemlik_1-1",
             "Actions": "A3",
             "Requisites": ""
         },
         {
             "Name": "E7",
-            "ComponentName": "ESTRUTURA-TORNO-1",
-            "SubComponentName": "gezer punta - mil-1",
+            "ComponentNames": "ESTRUTURA-TORNO-1",
+            "SubComponentNames": "gezer punta - mil-1",
             "Actions": "",
             "Requisites": ""
         },
         {
             "Name": "E8",
-            "ComponentName": "ESTRUTURA-TORNO-1",
-            "SubComponentName": "gezer punta - mil-1",
+            "ComponentNames": "ESTRUTURA-TORNO-1",
+            "SubComponentNames": "gezer punta - mil-1",
             "Actions": "",
             "Requisites": ""
         },
         {
             "Name": "E9",
-            "ComponentName": "ESTRUTURA-TORNO-1",
-            "SubComponentName": "gezer punta - mil-1",
+            "ComponentNames": "ESTRUTURA-TORNO-1",
+            "SubComponentNames": "gezer punta - mil-1",
             "Actions": "",
             "Requisites": ""
         }

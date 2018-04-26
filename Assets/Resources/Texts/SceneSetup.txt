@@ -1,4 +1,104 @@
 {
     "Name": "",
-    "EventOrder": "E1, E2, E3, E4"
+    "TrackedTags": [
+        {
+            "Name": "Salada",
+            "Model": {
+                "Name": "",
+                "Type": "",
+                "ModelPosition": "0, 0, 0",
+                "ModelRotation": "0, 0, 0",
+                "ModelScale": "0, 0, 0"
+            },
+            "PieceEvents": [
+                {
+                    "Name": "E1",
+                    "ComponentNames": "montaj-gezer punta",
+                    "SubComponentNames": "gezer punta - tekerlek_1-1",
+                    "Actions": "A1",
+                    "Requisites": ""
+                },
+                {
+                    "Name": "E2",
+                    "ComponentNames": "montaj-gezer punta",
+                    "SubComponentNames": "APERTO-PONTO-1",
+                    "Actions": "A2",
+                    "Requisites": ""
+                },
+                {
+                    "Name": "E3",
+                    "ComponentNames": "montaj-gezer punta",
+                    "SubComponentNames": "gezer punta - mil-1",
+                    "Actions": "A3",
+                    "Requisites": ""
+                }
+            ]
+        },
+        {
+            "Name": "Alface",
+            "Model": {
+                "Name": "",
+                "Type": "",
+                "ModelPosition": "0, 0, 0",
+                "ModelRotation": "0, 0, 0",
+                "ModelScale": "0, 0, 0"
+            },
+            "PieceEvents": [
+                {
+                    "Name": "E4",
+                    "ComponentNames": "MONTAGEM-TORRE-1",
+                    "SubComponentNames": "araba4_1-1",
+                    "Actions": "A1",
+                    "Requisites": ""
+                },
+                {
+                    "Name": "E5",
+                    "ComponentNames": "MONTAGEM-TORRE-1",
+                    "SubComponentNames": "araba4_1-2",
+                    "Actions": "A1",
+                    "Requisites": ""
+                },
+                {
+                    "Name": "E6",
+                    "ComponentNames": "MONTAGEM-TORRE-1",
+                    "SubComponentNames": "kalemlik_1-1",
+                    "Actions": "A3",
+                    "Requisites": ""
+                }
+            ]
+        },
+        {
+            "Name": "Abacate",
+            "Model": {
+                "Name": "",
+                "Type": "",
+                "ModelPosition": "0, 0, 0",
+                "ModelRotation": "0, 0, 0",
+                "ModelScale": "0, 0, 0"
+            },
+            "PieceEvents": [
+                {
+                    "Name": "E7",
+                    "ComponentNames": "ESTRUTURA-TORNO-1",
+                    "SubComponentNames": "gezer punta - mil-1",
+                    "Actions": "",
+                    "Requisites": ""
+                },
+                {
+                    "Name": "E8",
+                    "ComponentNames": "ESTRUTURA-TORNO-1",
+                    "SubComponentNames": "gezer punta - mil-1",
+                    "Actions": "",
+                    "Requisites": ""
+                },
+                {
+                    "Name": "E9",
+                    "ComponentNames": "ESTRUTURA-TORNO-1",
+                    "SubComponentNames": "gezer punta - mil-1",
+                    "Actions": "",
+                    "Requisites": ""
+                }
+            ]
+        }
+    ]
 }

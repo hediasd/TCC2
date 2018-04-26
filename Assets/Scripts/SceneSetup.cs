@@ -10,7 +10,9 @@ public class SceneSetup : LoadableResource {
 
 	public SceneSetup(){
 		TrackedTags = new List<TrackedTag>();
-		
+		TrackedTags.Add(new TrackedTag());
+		TrackedTags.Add(new TrackedTag());
+		TrackedTags.Add(new TrackedTag());
 	}
 
 }

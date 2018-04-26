@@ -16,14 +16,9 @@ public class PieceEventManager : MonoBehaviour {
 	public int Index, MaxIndex;
 
 	void Start () {
+
 		PieceEvents = new List<PieceEvent>();
-
-		int a = (int.Parse(this.gameObject.name) * 3);
-
-		for (int i = a-3; i < a; i++)
-		{
-			PieceEvents.Add(ResourcesMaster.PieceEvents[i]);
-		}
+		PieceEvents.Add(ResourcesMaster.PieceEvents[0]);
 
 		OngoingManagerEvent = PieceEvents[0];
 
@@ -42,7 +37,7 @@ public class PieceEventManager : MonoBehaviour {
 
 		OngoingManagerEvent = PieceEvents[Index];
 
-		GameObject Piece = transform.Find("Model").Find(OngoingManagerEvent.ComponentName).Find(OngoingManagerEvent.SubComponentName).GetChild(0).gameObject;
+		GameObject Piece = transform.Find("Model").Find(OngoingManagerEvent.ComponentNames).Find(OngoingManagerEvent.SubComponentNames).GetChild(0).gameObject;
 
 		foreach (PieceAction PA in OngoingManagerEvent.PieceActions)
 		{

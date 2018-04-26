@@ -5,13 +5,14 @@ using UnityEngine;
 [System.Serializable]
 public class TrackedTag : LoadableResource {
 
-	public string ModelNames = "A, B, C";
 	public PieceModel Model;
 	public List<PieceEvent> PieceEvents;
 
 	public TrackedTag(){
 		Model = new PieceModel();
 		PieceEvents = new List<PieceEvent>();
+		PieceEvents.Add(new PieceEvent());
+		PieceEvents.Add(new PieceEvent());
 	}
 
 }

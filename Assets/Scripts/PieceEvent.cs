@@ -7,7 +7,7 @@ using UnityEngine;
 [System.Serializable]
 public class PieceEvent : LoadableResource {
 
-    public string ComponentName, SubComponentName;
+    public string ComponentNames, SubComponentNames;
     public string Actions;
     public string Requisites;
 
@@ -39,7 +39,6 @@ public class PieceEvent : LoadableResource {
                 //Debug.Log("Null Action");
             }
         }
-    
     }
     
 
