@@ -8,8 +8,7 @@ using UnityEngine;
 public class PieceEvent : LoadableResource {
 
     public string ComponentNames, SubComponentNames;
-    public string Actions;
-    public string Requisites;
+    public string Actions, Requisites, Description;
 
     [System.NonSerialized]
     public List<PieceAction> PieceActions;

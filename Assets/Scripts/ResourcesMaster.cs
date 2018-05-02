@@ -60,8 +60,8 @@ public class ResourcesMaster : MonoBehaviour
 		//ResourcesMaster.WriteUp("PieceEvents", lsp);
 
         SceneSetup = ResourcesMaster.JsonToObject<SceneSetup>("SceneSetup");
-        string sss = ResourcesMaster.ObjectToJson<SceneSetup>(SceneSetup);
-        ResourcesMaster.WriteUp("SceneSetup", sss);
+        //string sss = ResourcesMaster.ObjectToJson<SceneSetup>(SceneSetup);
+        //ResourcesMaster.WriteUp("SceneSetup", sss);
         //
 
         Debug.Log("Count " + PieceEvents.Count);

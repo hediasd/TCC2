@@ -15,13 +15,13 @@ public class KeyboardMaster : MonoBehaviour {
 	void Update () {
 
 		if(Input.GetKeyDown ("q")){
-			AssemblyMaster.PreviousEvent(AssemblyMaster.PieceEventManagers[AssemblyMaster.PVEIndex]);
+			AssemblyMaster.PreviousEvent(AssemblyMaster.PieceEventManagers[AssemblyMaster.ManagersIndex]);
 		}
 		if(Input.GetKeyDown ("w")){
-			AssemblyMaster.PlayEvent(AssemblyMaster.PieceEventManagers[AssemblyMaster.PVEIndex]);
+			AssemblyMaster.PlayEvent(AssemblyMaster.PieceEventManagers[AssemblyMaster.ManagersIndex]);
 		}
 		if(Input.GetKeyDown ("e")){
-			AssemblyMaster.NextEvent(AssemblyMaster.PieceEventManagers[AssemblyMaster.PVEIndex]);
+			AssemblyMaster.NextEvent(AssemblyMaster.PieceEventManagers[AssemblyMaster.ManagersIndex]);
 		}
 		if(Input.GetKeyDown ("r")){
 

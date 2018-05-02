@@ -1,11 +1,10 @@
 {
-    "Name": "",
+    "Name": "BasicScene",
     "TrackedTags": [
         {
             "Name": "Salada",
             "Model": {
                 "Name": "",
-                "Type": "",
                 "ModelPosition": "0, 0, 0",
                 "ModelRotation": "0, 0, 0",
                 "ModelScale": "0, 0, 0"
@@ -16,26 +15,29 @@
                     "ComponentNames": "montaj-gezer punta",
                     "SubComponentNames": "gezer punta - tekerlek_1-1",
                     "Actions": "A1",
-                    "Requisites": ""
+                    "Requisites": "",
+                    "Description": "Gire o (222) Volante MBV-95 no sentido anti-horário para soltar a trava."
                 },
                 {
                     "Name": "E2",
                     "ComponentNames": "montaj-gezer punta",
                     "SubComponentNames": "APERTO-PONTO-1",
                     "Actions": "A2",
-                    "Requisites": ""
+                    "Requisites": "",
+                    "Description": "Gire o (217) Manipulo da Trava do Mangote no sentido anti-horário para destravar o mangote."
                 },
                 {
                     "Name": "E3",
                     "ComponentNames": "montaj-gezer punta",
                     "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "A3",
-                    "Requisites": ""
+                    "Requisites": "",
+                    "Description": "Retire o (214) Mangote de seu compartimento no cabeçote móvel."
                 }
             ]
         },
         {
-            "Name": "Alface",
+            "Name": "Tomate",
             "Model": {
                 "Name": "",
                 "Type": "",
@@ -49,21 +51,24 @@
                     "ComponentNames": "MONTAGEM-TORRE-1",
                     "SubComponentNames": "araba4_1-1",
                     "Actions": "A1",
-                    "Requisites": ""
+                    "Requisites": "",
+                    "Description": ""
                 },
                 {
                     "Name": "E5",
                     "ComponentNames": "MONTAGEM-TORRE-1",
                     "SubComponentNames": "araba4_1-2",
                     "Actions": "A1",
-                    "Requisites": ""
+                    "Requisites": "",
+                    "Description": ""
                 },
                 {
                     "Name": "E6",
                     "ComponentNames": "MONTAGEM-TORRE-1",
                     "SubComponentNames": "kalemlik_1-1",
                     "Actions": "A3",
-                    "Requisites": ""
+                    "Requisites": "",
+                    "Description": ""
                 }
             ]
         },
@@ -71,7 +76,6 @@
             "Name": "Abacate",
             "Model": {
                 "Name": "",
-                "Type": "",
                 "ModelPosition": "0, 0, 0",
                 "ModelRotation": "0, 0, 0",
                 "ModelScale": "0, 0, 0"
@@ -82,21 +86,24 @@
                     "ComponentNames": "ESTRUTURA-TORNO-1",
                     "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "",
-                    "Requisites": ""
+                    "Requisites": "",
+                    "Description": ""
                 },
                 {
                     "Name": "E8",
                     "ComponentNames": "ESTRUTURA-TORNO-1",
                     "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "",
-                    "Requisites": ""
+                    "Requisites": "",
+                    "Description": ""
                 },
                 {
                     "Name": "E9",
                     "ComponentNames": "ESTRUTURA-TORNO-1",
                     "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "",
-                    "Requisites": ""
+                    "Requisites": "",
+                    "Description": ""
                 }
             ]
         }

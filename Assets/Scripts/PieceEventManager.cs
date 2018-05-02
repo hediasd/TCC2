@@ -10,15 +10,15 @@ public class PieceEventManager : MonoBehaviour {
 	bool ShowingWarnings = false;
 
 	public PieceEvent OngoingManagerEvent;
-	List<PieceEvent> PieceEvents;
+	public List<PieceEvent> PieceEvents;
 
 
 	public int Index, MaxIndex;
 
-	void Start () {
+	public void FullyLoad () {
 
-		PieceEvents = new List<PieceEvent>();
-		PieceEvents.Add(ResourcesMaster.PieceEvents[0]);
+		//PieceEvents = new List<PieceEvent>();
+		//PieceEvents.Add(ResourcesMaster.PieceEvents[0]);
 
 		OngoingManagerEvent = PieceEvents[0];
 
@@ -33,11 +33,14 @@ public class PieceEventManager : MonoBehaviour {
 		
 	}
 
-	public void PlayEvent(){
+	public void ManagerPlayEvent(){
 
 		OngoingManagerEvent = PieceEvents[Index];
 
 		GameObject Piece = transform.Find("Model").Find(OngoingManagerEvent.ComponentNames).Find(OngoingManagerEvent.SubComponentNames).GetChild(0).gameObject;
+		
+		TextManager TextManager = transform.Find("Model").Find("Panel").GetComponentInChildren<TextManager>();
+		TextManager.ChangeText(OngoingManagerEvent.Description);
 
 		foreach (PieceAction PA in OngoingManagerEvent.PieceActions)
 		{
@@ -53,9 +56,6 @@ public class PieceEventManager : MonoBehaviour {
 			}
 		}
 
-	}
-	public void NextEvent(){
-		
 	}
 
 	public void Enableds(bool s1, bool s2, bool s3){
