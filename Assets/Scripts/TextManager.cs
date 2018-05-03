@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,16 +21,17 @@ public class TextManager : MonoBehaviour {
 
 		for (int i = 0; i < s.Length; i++)
 		{
-			if(charsAtLine >= 16)
+			if(charsAtLine >= 22)
 			{
-				for (int j = i; j > 0; j--)
+				for (int j = i-1; j > 0; j--)
 				{
-					break;
 					if(formatted_s[j] == ' ')
 					{
-					//	formatted_s.Insert(j, "Q");
-						//charsAtLine = 0;
-						//break;
+						formatted_s = formatted_s.Remove(j, 1);
+						formatted_s = formatted_s.Insert(j, "\n");
+						Debug.Log(formatted_s);
+						charsAtLine = 0;
+						break;
 					}
 
 				}
@@ -42,8 +44,7 @@ public class TextManager : MonoBehaviour {
 
 		TextMesh.text = formatted_s;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		
 	}
