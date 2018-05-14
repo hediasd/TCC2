@@ -5,16 +5,18 @@ using UnityEngine;
 public class Spin : MonoBehaviour {
 
 	// Use this for initialization
-	public Vector3 rot;
+	public Vector3 RotationAmount;
+	public Quaternion OriginalRotation;
 	public bool loaded = false;
 	float t = 0.0f;
-	float maxtime;
+	float MaxTime;
 
 
 	public void LoadEvent(Vector3 vector, float maxtime){
-		this.maxtime = maxtime;
-		rot = vector;
+		this.MaxTime = maxtime;
+		RotationAmount = vector;
 		loaded = true;
+		OriginalRotation = this.transform.rotation;
 	}
 	
 	void Update () {
@@ -28,10 +30,13 @@ public class Spin : MonoBehaviour {
 		} */
         if(loaded){
 
-			transform.Rotate(rot/maxtime);
+			transform.Rotate(RotationAmount/MaxTime);
 			t += TimeMaster.GeneralTiming * Time.deltaTime;
 
-			if(t >= maxtime) Destroy(this);
+			if(t >= MaxTime){
+				this.transform.rotation = OriginalRotation;
+				Destroy(this);
+			}
 
 		}
 

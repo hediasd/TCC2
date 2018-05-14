@@ -58,8 +58,9 @@ public class ViewTrigger : MonoBehaviour
 
                 //mTransitionManager.Play(goingBackToAR);
                 // PLAY
-                this.GetComponent<ButtonManager>().Activate();
+
                 StartCoroutine(ResetAfter(1.0f));
+                this.GetComponent<ButtonManager>().Activate();
                     //0.3f * mTransitionManager.transitionDuration));
             }
         }

@@ -1,0 +1,52 @@
+{
+    "Name": "BicycleScene",
+    "TrackedTags": [
+        {
+            "Name": "Tomate",
+            "Model": {
+                "Name": "",
+                "ModelPosition": "0, 0, 0",
+                "ModelRotation": "0, 0, 0",
+                "ModelScale": "0, 0, 0"
+            },
+            "PieceEvents": [
+                {
+                    "Name": "E1",
+                    "ComponentNames": "BARRA",
+                    "SubComponentNames": "P2",
+                    "Actions": "RY10",
+                    "Requisites": "",
+                    "Description": "Gire o parafuso para soltar a peça do eixo."
+                },
+                {
+                    "Name": "E2",
+                    "ComponentNames": "BARRA",
+                    "SubComponentNames": "P2",
+                    "Actions": "MY10",
+                    "Requisites": "",
+                    "Description": "Retire o parafuso e a peça para soltar o banco."
+                }
+            ]
+        },
+        {
+            "Name": "Alface",
+            "Model": {
+                "Name": "",
+                "Type": "",
+                "ModelPosition": "0, 0, 0",
+                "ModelRotation": "0, 0, 0",
+                "ModelScale": "0, 0, 0"
+            },
+            "PieceEvents": [
+                {
+                    "Name": "E4",
+                    "ComponentNames": "BANCO",
+                    "SubComponentNames": "B",
+                    "Actions": "A1",
+                    "Requisites": "",
+                    "Description": "Remova o banco."
+                }
+            ]
+        }
+    ]
+}

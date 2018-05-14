@@ -37,7 +37,7 @@ public class PieceEventManager : MonoBehaviour {
 
 		OngoingManagerEvent = PieceEvents[Index];
 
-		GameObject Piece = transform.Find("Model").Find(OngoingManagerEvent.ComponentNames).Find(OngoingManagerEvent.SubComponentNames).GetChild(0).gameObject;
+		GameObject Piece = transform.Find("Model").Find(OngoingManagerEvent.ComponentNames).Find(OngoingManagerEvent.SubComponentNames).gameObject;
 		
 		TextManager TextManager = transform.Find("Model").Find("Panel").GetComponentInChildren<TextManager>();
 		TextManager.ChangeText(OngoingManagerEvent.Description);
@@ -46,11 +46,11 @@ public class PieceEventManager : MonoBehaviour {
 		{
 			Debug.Log("Playing event "+OngoingManagerEvent.Name + " " + PA.Name + " " + PA.TranslationAmountVector + " " +float.Parse(PA.TranslationTime)) ;
 
-			if(PA.TranslationAmountVector != Vector3.zero && float.Parse(PA.TranslationTime) > 0){
+			if(Piece.GetComponent<Move>() == null && PA.TranslationAmountVector != Vector3.zero && float.Parse(PA.TranslationTime) > 0){
 				Move MoveScript = Piece.AddComponent<Move>();
 				MoveScript.LoadEvent(PA.TranslationAmountVector, float.Parse(PA.TranslationTime));
 			}
-			if(PA.RotationAmountVector != Vector3.zero && float.Parse(PA.RotationTime) > 0){
+			if(Piece.GetComponent<Spin>() == null && PA.RotationAmountVector != Vector3.zero && float.Parse(PA.RotationTime) > 0){
 				Spin SpinScript = Piece.AddComponent<Spin>();
 				SpinScript.LoadEvent(PA.RotationAmountVector, float.Parse(PA.RotationTime));
 			}

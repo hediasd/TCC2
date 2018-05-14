@@ -5,16 +5,18 @@ using UnityEngine;
 public class Move : MonoBehaviour {
 
 	// Use this for initialization
-	public Vector3 rot;
+	public Vector3 TranslateAmount;
+	public Vector3 OriginalPosition;
 	public bool loaded = false;
 	float t = 0.0f;
-	float maxtime;
+	float MaxTime;
 
 
 	public void LoadEvent(Vector3 vector, float maxtime){
-		this.maxtime = maxtime;
-		rot = vector;
+		this.MaxTime = maxtime;
+		TranslateAmount = vector;
 		loaded = true;
+		OriginalPosition = this.transform.position;
 	}
 	
 	void Update () {
@@ -28,10 +30,13 @@ public class Move : MonoBehaviour {
 		} */
         if(loaded){
 
-			transform.Translate((rot/maxtime)/1000);
+			transform.Translate((TranslateAmount/MaxTime) / 1000);
 			t += TimeMaster.GeneralTiming * Time.deltaTime;
 
-			if(t >= maxtime) Destroy(this);
+			if(t >= MaxTime){
+				this.transform.position = OriginalPosition;
+				Destroy(this);
+			}
 
 		}
 

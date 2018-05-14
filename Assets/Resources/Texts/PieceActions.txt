@@ -27,6 +27,20 @@
             "RotationTime": "3",
             "TranslationAmount": "0, 0, 0",
             "TranslationTime": "5"
+        },
+        {
+            "Name": "MY10",
+            "RotationAmount": "0, 0, 0",
+            "RotationTime": "1",
+            "TranslationAmount": "0, 30, 0",
+            "TranslationTime": "3"
+        },
+        {
+            "Name": "RY10",
+            "RotationAmount": "0, 50, 0",
+            "RotationTime": "3",
+            "TranslationAmount": "0, 0, 0",
+            "TranslationTime": "1"
         }
     ]
 }
