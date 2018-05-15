@@ -37,10 +37,20 @@ public class PieceEventManager : MonoBehaviour {
 
 		OngoingManagerEvent = PieceEvents[Index];
 
-		GameObject Piece = transform.Find("Model").Find(OngoingManagerEvent.ComponentNames).Find(OngoingManagerEvent.SubComponentNames).gameObject;
+		GameObject Piece = transform.Find("Model").Find(OngoingManagerEvent.ComponentNames).Find(OngoingManagerEvent.SubComponentNames).GetChild(0).gameObject;
 		
-		TextManager TextManager = transform.Find("Model").Find("Panel").GetComponentInChildren<TextManager>();
-		TextManager.ChangeText(OngoingManagerEvent.Description);
+		foreach (PanelText Tuple in OngoingManagerEvent.Description)
+		{
+			TextManager TextManager = transform.Find("Panels").Find(Tuple.PanelName).GetComponentInChildren<TextManager>();
+			if(TextManager == null){
+				Debug.LogError("Invalid Panel Name");
+			}
+			else{
+				TextManager.ChangeText(Tuple.Text);
+			}
+		}
+		
+		//TextManager.ChangeText(OngoingManagerEvent.Description);
 
 		foreach (PieceAction PA in OngoingManagerEvent.PieceActions)
 		{

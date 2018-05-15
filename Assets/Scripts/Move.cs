@@ -16,7 +16,7 @@ public class Move : MonoBehaviour {
 		this.MaxTime = maxtime;
 		TranslateAmount = vector;
 		loaded = true;
-		OriginalPosition = this.transform.position;
+		OriginalPosition = this.transform.localPosition;
 	}
 	
 	void Update () {
@@ -34,7 +34,7 @@ public class Move : MonoBehaviour {
 			t += TimeMaster.GeneralTiming * Time.deltaTime;
 
 			if(t >= MaxTime){
-				this.transform.position = OriginalPosition;
+				this.transform.localPosition = OriginalPosition;
 				Destroy(this);
 			}
 

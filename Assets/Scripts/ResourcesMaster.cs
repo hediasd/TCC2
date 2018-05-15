@@ -63,6 +63,18 @@ public class ResourcesMaster : MonoBehaviour
         SceneSetup = ResourcesMaster.JsonToObject<SceneSetup>("SceneSetup_Bicicleta");
         string sss = ResourcesMaster.ObjectToJson<SceneSetup>(SceneSetup);
         ResourcesMaster.WriteUp("SceneSetupBackup", sss);
+
+        foreach (TrackedTag Tk in SceneSetup.TrackedTags)
+        {
+            foreach (PieceModel Panel in Tk.Panels)
+            {
+                Panel.FullyLoad();
+            }
+            foreach (PieceModel Model in Tk.Models)
+            {
+                Model.FullyLoad();
+            }
+        }
         //
 
         Debug.Log("Count " + PieceEvents.Count);

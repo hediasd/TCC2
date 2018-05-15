@@ -8,12 +8,15 @@ using UnityEngine;
 public class PieceEvent : LoadableResource {
 
     public string ComponentNames, SubComponentNames;
-    public string Actions, Requisites, Description;
+    public string Actions, Requisites;
+
+    public List<PanelText> Description;
 
     [System.NonSerialized]
     public List<PieceAction> PieceActions;
     
     public PieceEvent(){
+        Description = new List<PanelText>();
         PieceActions = new List<PieceAction>();
         //LoadActions();
     }

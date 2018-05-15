@@ -15,7 +15,11 @@ public class AssemblyMaster : MonoBehaviour {
 	SceneSetup LoadedSceneSetup;
 	List<TrackedTag> TrackedTags;
 
+	public GameObject PanelBase, ModelBase;
+
 	void Start(){
+
+
 
 		LoadedSceneSetup = ResourcesMaster.SceneSetup;
 		GetComponent<SetupHolder>().SceneSetup = LoadedSceneSetup;
@@ -35,6 +39,17 @@ public class AssemblyMaster : MonoBehaviour {
 
 			TrackedTag TkTag = TrackedTags.Find(Tag => Tag.Name.Equals(ChildModel.name));
 			if(TkTag == null) Debug.Log("Couldnt find such Tag "+i);
+			
+			Transform PanelsFather = ChildModel.transform.Find("Panels");
+
+			foreach (PieceModel Panel in TkTag.Panels)
+			{
+				GameObject NewPanel = Instantiate(PanelBase, PanelsFather);
+				NewPanel.name = Panel.Name;
+				NewPanel.transform.localPosition = Panel.ModelPositionVector;
+				NewPanel.transform.localRotation = Panel.ModelRotationVector;
+				NewPanel.transform.localScale = Panel.ModelScaleVector;
+			}
 
 			PEM.PieceEvents = new List<PieceEvent>(TkTag.PieceEvents);
 			PEM.FullyLoad();

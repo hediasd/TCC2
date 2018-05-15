@@ -34,3 +34,10 @@ public static class Utility {
 	}
 	
 }
+
+[Serializable]
+public class PanelText {
+
+	public string PanelName, Text;
+
+}

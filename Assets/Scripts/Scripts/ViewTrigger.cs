@@ -59,15 +59,22 @@ public class ViewTrigger : MonoBehaviour
                 //mTransitionManager.Play(goingBackToAR);
                 // PLAY
 
-                StartCoroutine(ResetAfter(1.0f));
+                mTriggered = false;
+                mFocusedTime = 0;
+                Focused = false;
+                UpdateMaterials(false);
+
                 this.GetComponent<ButtonManager>().Activate();
+                
                     //0.3f * mTransitionManager.transitionDuration));
             }
         }
         else
         {
             // Reset the "focused state" time
+            if(mFocusedTime > 0) ResetAfter(0.001f);
             mFocusedTime = 0;
+            
         }
     }
 
