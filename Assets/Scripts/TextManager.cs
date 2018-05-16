@@ -9,10 +9,12 @@ public class TextManager : MonoBehaviour {
 	TextMesh TextMesh;
 
 	void Start() {
-		TextMesh = GetComponent<TextMesh>();
+		
 	}
 
 	public void ChangeText(string s){
+		TextMesh = GetComponent<TextMesh>();
+
 		text = s;
 		string formatted_s = "";
 		int charsAtLine = 0;

@@ -1,27 +1,9 @@
 {
     "Name": "BicycleScene",
-    "TrackedTags": [
+    "TrackedAnimationTags": [
         {
             "Name": "Tomate",
-            "Type": "",
-            "Models": [
-                {
-                    "Name": "M1",
-                    "Type": "",
-                    "Color": "",
-                    "ModelPosition": "-1.4, -1.7, 0",
-                    "ModelRotation": "0, 0, -25",
-                    "ModelScale": "1, 1, 1"
-                },
-                {
-                    "Name": "M2",
-                    "Type": "",
-                    "Color": "",
-                    "ModelPosition": "-1.4, -1.7, 0",
-                    "ModelRotation": "0, 0, -25",
-                    "ModelScale": "1, 1, 1"
-                }
-            ],
+            "Models": [],
             "Panels": [
                 {
                     "Name": "Panel1",
@@ -71,9 +53,17 @@
         },
         {
             "Name": "Alface",
-            "Type": "",
             "Models": [],
-            "Panels": [],
+            "Panels": [
+                {
+                    "Name": "Panel1",
+                    "Type": "",
+                    "Color": "",
+                    "ModelPosition": "-1.4, -1.7, 0",
+                    "ModelRotation": "0, 0, -25",
+                    "ModelScale": "1, 1, 1"
+                }
+            ],
             "PieceEvents": [
                 {
                     "Name": "E4",
@@ -90,5 +80,6 @@
                 }
             ]
         }
-    ]
+    ],
+    "TrackedToolboxTags": []
 }

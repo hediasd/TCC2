@@ -15,11 +15,13 @@ public class PieceEventManager : MonoBehaviour {
 
 	public int Index, MaxIndex;
 
-	public void FullyLoad () {
+	public void FullyLoad (List<PieceEvent> PieceEventsList) {
 
 		//PieceEvents = new List<PieceEvent>();
 		//PieceEvents.Add(ResourcesMaster.PieceEvents[0]);
-
+		PieceEvents = new List<PieceEvent>();
+		PieceEvents.AddRange(PieceEventsList);
+		
 		OngoingManagerEvent = PieceEvents[0];
 
 		Index = 0;
@@ -29,6 +31,13 @@ public class PieceEventManager : MonoBehaviour {
 		{
 			PE.FullyLoad();
 		}
+
+		//Transform PanelsFather = transform.Find("Panels");
+		//foreach (PanelText Tuple in PieceEvents[0].Description)
+		//{
+		//	TextManager TextManager = PanelsFather.Find(Tuple.PanelName).Find("Text").GetComponent<TextManager>();
+		//	TextManager.ChangeText(Tuple.Text);
+		//}
 		//GameObject.Find("Text").GetComponent<Text>().text = "aaaa" + PieceEvents[0];
 		
 	}
@@ -37,24 +46,37 @@ public class PieceEventManager : MonoBehaviour {
 
 		OngoingManagerEvent = PieceEvents[Index];
 
-		GameObject Piece = transform.Find("Model").Find(OngoingManagerEvent.ComponentNames).Find(OngoingManagerEvent.SubComponentNames).GetChild(0).gameObject;
-		
+		GameObject Piece = transform.Find("Models").Find(OngoingManagerEvent.ComponentNames).Find(OngoingManagerEvent.SubComponentNames).GetChild(0).gameObject;
+		if(Piece == null){
+			Debug.LogError("Invalid Components Name");
+		}
+
+		Transform PanelsFather = transform.Find("Panels");
+
 		foreach (PanelText Tuple in OngoingManagerEvent.Description)
 		{
-			TextManager TextManager = transform.Find("Panels").Find(Tuple.PanelName).GetComponentInChildren<TextManager>();
-			if(TextManager == null){
-				Debug.LogError("Invalid Panel Name");
+			Transform Panel = PanelsFather.Find(Tuple.PanelName);
+
+			if(Panel == null){
+				Debug.LogError("Invalid Panel " + Tuple);
 			}
 			else{
-				TextManager.ChangeText(Tuple.Text);
+				TextManager TextManager = Panel.Find("Text").GetComponent<TextManager>();
+				if(TextManager == null){
+					Debug.LogError("Invalid Panel Name " + Tuple);
+				}
+				else{
+					TextManager.ChangeText(Tuple.Text);
+				}			
 			}
+
 		}
 		
 		//TextManager.ChangeText(OngoingManagerEvent.Description);
 
 		foreach (PieceAction PA in OngoingManagerEvent.PieceActions)
 		{
-			Debug.Log("Playing event "+OngoingManagerEvent.Name + " " + PA.Name + " " + PA.TranslationAmountVector + " " +float.Parse(PA.TranslationTime)) ;
+			Debug.Log("Playing event "+OngoingManagerEvent.Name + " " + PA.Name + " " + PA.TranslationAmountVector + " " + PA.RotationAmountVector) ;
 
 			if(Piece.GetComponent<Move>() == null && PA.TranslationAmountVector != Vector3.zero && float.Parse(PA.TranslationTime) > 0){
 				Move MoveScript = Piece.AddComponent<Move>();
@@ -68,14 +90,15 @@ public class PieceEventManager : MonoBehaviour {
 
 	}
 
-	public void Enableds(bool s1, bool s2, bool s3){
-		EnabledModel(s1);
-		EnabledButtons(s2);
-		EnabledWarnings(s3);
+	public void Enableds(bool Models, bool Buttons, bool Warnings){
+		EnabledModel(Models);
+		EnabledButtons(Buttons);
+		EnabledWarnings(Warnings);
 	}
 	public void EnabledModel(bool state){
 		ShowingModel = state;
-		transform.Find("Model").gameObject.SetActive(state);
+		transform.Find("Models").gameObject.SetActive(state);
+		transform.Find("Panels").gameObject.SetActive(state);
 	}
 	public void EnabledButtons(bool state){
 		ShowingButtons = state;

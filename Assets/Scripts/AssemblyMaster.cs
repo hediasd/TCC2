@@ -13,18 +13,20 @@ public class AssemblyMaster : MonoBehaviour {
 	PieceEvent OngoingGlobalEvent;
 
 	SceneSetup LoadedSceneSetup;
-	List<TrackedTag> TrackedTags;
+	List<TrackedAnimationTag> TrackedAnimationTags;
+	List<TrackedToolboxTag> TrackedToolboxTags;
 
 	public GameObject PanelBase, ModelBase;
 
 	void Start(){
 
-
-
 		LoadedSceneSetup = ResourcesMaster.SceneSetup;
 		GetComponent<SetupHolder>().SceneSetup = LoadedSceneSetup;
 
-		TrackedTags = new List<TrackedTag>(LoadedSceneSetup.TrackedTags);
+		TrackedAnimationTags = new List<TrackedAnimationTag>(LoadedSceneSetup.TrackedAnimationTags);
+		TrackedToolboxTags = new List<TrackedToolboxTag>(LoadedSceneSetup.TrackedToolboxTags);
+
+
 		ModelsFather = GameObject.Find("ModelsFather").transform;
 
 		PieceEventManagers = new List<PieceEventManager>();
@@ -32,37 +34,55 @@ public class AssemblyMaster : MonoBehaviour {
 
 		for (int i = 0; i < ModelsFather.childCount; i++)
 		{
+			//ToolboxManager TM = new ToolboxManager();
 
 			GameObject ChildModel = ModelsFather.GetChild(i).gameObject;
-			PieceEventManager PEM = ChildModel.GetComponent<PieceEventManager>();
-			PEM.Enableds(false, false, true);
 
-			TrackedTag TkTag = TrackedTags.Find(Tag => Tag.Name.Equals(ChildModel.name));
-			if(TkTag == null) Debug.Log("Couldnt find such Tag "+i);
-			
-			Transform PanelsFather = ChildModel.transform.Find("Panels");
+			TrackedAnimationTag TkAnimationTag = TrackedAnimationTags.Find(Tag => Tag.Name.Equals(ChildModel.name));
+			TrackedToolboxTag TkToolboxTag = TrackedToolboxTags.Find(Tag => Tag.Name.Equals(ChildModel.name));
 
-			foreach (PieceModel Panel in TkTag.Panels)
-			{
-				GameObject NewPanel = Instantiate(PanelBase, PanelsFather);
-				NewPanel.name = Panel.Name;
-				NewPanel.transform.localPosition = Panel.ModelPositionVector;
-				NewPanel.transform.localRotation = Panel.ModelRotationVector;
-				NewPanel.transform.localScale = Panel.ModelScaleVector;
+			if(TkAnimationTag == null && TkToolboxTag == null){
+				Debug.Log("Couldnt find such Tag "+ ChildModel.name + " " + i);
+				continue;
+			}
+			if(TkAnimationTag != null){
+				
+				PieceEventManager PEM = ChildModel.AddComponent<PieceEventManager>();
+				PEM.Enableds(Models: false, Buttons: false, Warnings: true);		
+
+				Transform PanelsFather = ChildModel.transform.Find("Panels");
+				foreach (PieceModel Panel in TkAnimationTag.Panels)
+				{
+					GameObject NewPanel = Instantiate(PanelBase, PanelsFather);
+					NewPanel.name = Panel.Name;
+					NewPanel.transform.localPosition = Panel.ModelPositionVector;
+					NewPanel.transform.localRotation = Panel.ModelRotationVector;
+					NewPanel.transform.localScale = Panel.ModelScaleVector;
+				}
+
+				Transform Models = ChildModel.transform.Find("Models");
+				foreach (PieceModel Model in TkAnimationTag.Models){
+					GameObject NewModel = Instantiate(PanelBase, Models);
+					NewModel.name = Model.Name;
+					NewModel.transform.localPosition = Model.ModelPositionVector;
+					NewModel.transform.localRotation = Model.ModelRotationVector;
+					NewModel.transform.localScale = Model.ModelScaleVector;
+				}
+				
+				PEM.FullyLoad(TkAnimationTag.PieceEvents);
+				//Debug.Log(PEM.PieceEvents.Count);
+				PieceEventManagers.Add(PEM);
+
+			}
+			if(TkToolboxTag != null){
+				//TM = ChildModel.AddComponent<ToolboxManager>();	
 			}
 
-			PEM.PieceEvents = new List<PieceEvent>(TkTag.PieceEvents);
-			PEM.FullyLoad();
-
-			PieceEventManagers.Add(PEM);
 			
 		}
 
-
-
-		PieceEventManagers[0].Enableds(true, true, false);
+		PieceEventManagers[0].Enableds(Models: true, Buttons: true, Warnings: false);
 		OngoingGlobalEvent = PieceEventManagers[0].OngoingManagerEvent;
-
 
 		PlayEvent(PieceEventManagers[0]);
 
@@ -87,17 +107,13 @@ public class AssemblyMaster : MonoBehaviour {
 			}	
 		}else if(PieceEventManagers.IndexOf(PVE) > 0){
 			ManagersIndex--;
-			PVE.Enableds(false, false, true);
-			PieceEventManagers[PieceEventManagers.IndexOf(PVE) - 1].Enableds(true, true, false);
+			PVE.Enableds(Models: false, Buttons: false, Warnings: true);
+			PieceEventManagers[PieceEventManagers.IndexOf(PVE) - 1].Enableds(Models: true, Buttons: true, Warnings: false);
 		}
 	}
 
 	public void PlayEvent(PieceEventManager PVE){
-		try{
-			PVE.ManagerPlayEvent();
-		}catch(Exception e){
-			Debug.Log(e.Message);
-		}
+		PVE.ManagerPlayEvent();
 	}
 
 	public void NextEvent(PieceEventManager PVE){
@@ -114,8 +130,8 @@ public class AssemblyMaster : MonoBehaviour {
 			}			
 		}else if(PieceEventManagers.IndexOf(PVE) < PieceEventManagers.Count-1){
 			ManagersIndex++;
-			PVE.Enableds(false, false, true);
-			PieceEventManagers[PieceEventManagers.IndexOf(PVE) + 1].Enableds(true, true, false);
+			PVE.Enableds(Models: false, Buttons: false, Warnings: true);
+			PieceEventManagers[PieceEventManagers.IndexOf(PVE) + 1].Enableds(Models: true, Buttons: true, Warnings: false);
 		}
 
 

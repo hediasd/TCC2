@@ -3,12 +3,17 @@
     "TrackedTags": [
         {
             "Name": "Salada",
-            "Model": {
-                "Name": "",
-                "ModelPosition": "0, 0, 0",
-                "ModelRotation": "0, 0, 0",
-                "ModelScale": "0, 0, 0"
-            },
+            "Models": [],
+            "Panels": [
+                {
+                    "Name": "Panel1",
+                    "Type": "",
+                    "Color": "",
+                    "ModelPosition": "-1.4, -1.7, 0",
+                    "ModelRotation": "0, 0, -25",
+                    "ModelScale": "1, 1, 1"
+                }
+            ],
             "PieceEvents": [
                 {
                     "Name": "E1",
@@ -38,72 +43,75 @@
         },
         {
             "Name": "Tomate",
-            "Model": {
-                "Name": "",
-                "Type": "",
-                "ModelPosition": "0, 0, 0",
-                "ModelRotation": "0, 0, 0",
-                "ModelScale": "0, 0, 0"
-            },
+            "Models": [],
+            "Panels": [
+                {
+                    "Name": "Panel1",
+                    "Type": "",
+                    "Color": "",
+                    "ModelPosition": "-1.4, -1.7, 0",
+                    "ModelRotation": "0, 0, -25",
+                    "ModelScale": "1, 1, 1"
+                }
+            ],
             "PieceEvents": [
                 {
                     "Name": "E4",
                     "ComponentNames": "MONTAGEM-TORRE-1",
                     "SubComponentNames": "araba4_1-1",
                     "Actions": "A1",
-                    "Requisites": "",
-                    "Description": ""
+                    "Requisites": ""
                 },
                 {
                     "Name": "E5",
                     "ComponentNames": "MONTAGEM-TORRE-1",
                     "SubComponentNames": "araba4_1-2",
                     "Actions": "A1",
-                    "Requisites": "",
-                    "Description": ""
+                    "Requisites": ""
                 },
                 {
                     "Name": "E6",
                     "ComponentNames": "MONTAGEM-TORRE-1",
                     "SubComponentNames": "kalemlik_1-1",
                     "Actions": "A3",
-                    "Requisites": "",
-                    "Description": ""
+                    "Requisites": ""
                 }
             ]
         },
         {
             "Name": "Abacate",
-            "Model": {
-                "Name": "",
-                "ModelPosition": "0, 0, 0",
-                "ModelRotation": "0, 0, 0",
-                "ModelScale": "0, 0, 0"
-            },
+            "Models": [],
+            "Panels": [
+                {
+                    "Name": "Panel1",
+                    "Type": "",
+                    "Color": "",
+                    "ModelPosition": "-1.4, -1.7, 0",
+                    "ModelRotation": "0, 0, -25",
+                    "ModelScale": "1, 1, 1"
+                }
+            ],
             "PieceEvents": [
                 {
                     "Name": "E7",
                     "ComponentNames": "ESTRUTURA-TORNO-1",
                     "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "",
-                    "Requisites": "",
-                    "Description": ""
+                    "Requisites": ""
                 },
                 {
                     "Name": "E8",
                     "ComponentNames": "ESTRUTURA-TORNO-1",
                     "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "",
-                    "Requisites": "",
-                    "Description": ""
+                    "Requisites": ""
                 },
                 {
                     "Name": "E9",
                     "ComponentNames": "ESTRUTURA-TORNO-1",
                     "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "",
-                    "Requisites": "",
-                    "Description": ""
+                    "Requisites": ""
                 }
             ]
         }

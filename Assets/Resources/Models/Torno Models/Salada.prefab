@@ -2014,7 +2014,7 @@ MonoBehaviour:
     SubComponentNames: 
     Actions: 
     Requisites: 
-    Description: 
+    Description: []
   PieceEvents: []
   Index: 0
   MaxIndex: 0

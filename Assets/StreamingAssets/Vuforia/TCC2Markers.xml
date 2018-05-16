@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="hope" size="1.000000 0.394161" />
-    <ImageTarget name="new" size="1.000000 0.421053" />
-    <ImageTarget name="newbar" size="1.000000 0.436893" />
-    <ImageTarget name="B_Alfafa" size="1.000000 0.409091" />
-    <ImageTarget name="B_Salada" size="1.000000 0.409091" />
-    <ImageTarget name="B_Alface" size="1.000000 0.409091" />
+    <ImageTarget name="Bar4" size="1.000000 0.394161" />
+    <ImageTarget name="Bar3" size="1.000000 0.394161" />
+    <ImageTarget name="Bar2" size="1.000000 0.394161" />
+    <ImageTarget name="Bar1" size="1.000000 0.394161" />
     <ImageTarget name="reidecopas" size="1.000000 1.278810" />
     <ImageTarget name="Salada" size="1.000000 1.000000" />
     <ImageTarget name="Tomate" size="1.000000 1.000000" />

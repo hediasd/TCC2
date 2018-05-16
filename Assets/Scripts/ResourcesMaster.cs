@@ -20,7 +20,6 @@ public class ResourcesMaster : MonoBehaviour
     public static Dictionary<string, PieceAction> PieceActionsDictionary;
 
     public static List<PieceAction> PieceActions;
-    public static List<PieceEvent> PieceEvents;
     public static int EventsIndex;
     public static SceneSetup SceneSetup;
 
@@ -28,7 +27,7 @@ public class ResourcesMaster : MonoBehaviour
     public static Dictionary<string, PieceModelObject> PieceModelObjectsDictionary;
     public static Dictionary<string, PieceModelTextPanel> PieceModelTextPanelsDictionary;
 
-    public static Dictionary<string, TrackedTag> TrackedTagsDictionary;
+    public static Dictionary<string, TrackedAnimationTag> TrackedTagsDictionary;
 
     public static Dictionary<string, Material> Materials;
 
@@ -52,19 +51,11 @@ public class ResourcesMaster : MonoBehaviour
         }
 		//ResourcesMaster.WriteUp("PieceActions", lcsp);
 
-        PieceEvents = ResourcesMaster.JsonToList<PieceEvent>("PieceEvents");
-        string lsp = ResourcesMaster.ListToJson<PieceEvent>(PieceEvents);
-        foreach (PieceEvent pa in PieceEvents)
-        {
-            //PieceEventsDictionary.Add(pa.Name, pa);
-        }
-		//ResourcesMaster.WriteUp("PieceEvents", lsp);
-
         SceneSetup = ResourcesMaster.JsonToObject<SceneSetup>("SceneSetup_Bicicleta");
         string sss = ResourcesMaster.ObjectToJson<SceneSetup>(SceneSetup);
         ResourcesMaster.WriteUp("SceneSetupBackup", sss);
 
-        foreach (TrackedTag Tk in SceneSetup.TrackedTags)
+        foreach (TrackedAnimationTag Tk in SceneSetup.TrackedAnimationTags)
         {
             foreach (PieceModel Panel in Tk.Panels)
             {
@@ -77,7 +68,6 @@ public class ResourcesMaster : MonoBehaviour
         }
         //
 
-        Debug.Log("Count " + PieceEvents.Count);
         
     }
 

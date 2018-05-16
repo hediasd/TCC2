@@ -40,4 +40,7 @@ public class PanelText {
 
 	public string PanelName, Text;
 
+	public override string ToString(){
+		return PanelName + ";" + Text;
+	}
 }

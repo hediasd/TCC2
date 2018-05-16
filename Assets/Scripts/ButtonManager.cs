@@ -12,11 +12,13 @@ public class ButtonManager : MonoBehaviour {
 	void Start () {
 		//this.GetComponent<MeshRenderer>().materials[1] = 
 		AssemblyMaster = GameObject.Find("Logic").GetComponent<AssemblyMaster>();
-		PVE = this.transform.parent.parent.GetComponent<PieceEventManager>();
 	}
 
     // GameObject TriggeredTag = this.transform.parent.parent.gameObject;
 	public void Activate(){
+
+		PVE = this.transform.parent.parent.GetComponent<PieceEventManager>();
+		
 		switch (type) {
 			case "B":
 				AssemblyMaster.PreviousEvent(PVE);

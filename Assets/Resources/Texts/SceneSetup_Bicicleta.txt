@@ -1,28 +1,14 @@
 {
     "Name": "BicycleScene",
-    "TrackedTags": [
+    "TrackedAnimationTags": [
         {
             "Name": "Tomate",
-            "Models": [
-                {
-                    "Name": "M1",
-                    "Type": "",
-                    "ModelPosition": "-1.4, -1.7, 0",
-                    "ModelRotation": "0, 0, -25",
-                    "ModelScale": "1, 1, 1"
-                },
-                {
-                    "Name": "M2",
-                    "Type": "",
-                    "ModelPosition": "-1.4, -1.7, 0",
-                    "ModelRotation": "0, 0, -25",
-                    "ModelScale": "1, 1, 1"
-                }
-            ],
+            "Models": [],
             "Panels": [
                 {
                     "Name": "Panel1",
                     "Type": "",
+                    "Color": "",
                     "ModelPosition": "-1.4, -1.7, 0",
                     "ModelRotation": "0, 0, -25",
                     "ModelScale": "1, 1, 1"
@@ -30,6 +16,7 @@
                 {
                     "Name": "Panel2",
                     "Type": "",
+                    "Color": "",
                     "ModelPosition": "2.6, -1.7, 0",
                     "ModelRotation": "0, 0, 30",
                     "ModelScale": "1, 1, 1"
@@ -66,22 +53,17 @@
         },
         {
             "Name": "Alface",
-            "Model": {
-                "Name": "",
-                "Type": "",
-                "ModelPosition": "0, 0, 0",
-                "ModelRotation": "0, 0, 0",
-                "ModelScale": "0, 0, 0"
-            },
-            "Panel": {
-                "Name": "Panel1",
-                "Type": "",
-                "ModelPosition": "0, 0, 0",
-                "ModelRotation": "0, 0, 0",
-                "ModelScale": "0, 0, 0"
-            },
             "Models": [],
-            "Panels": [],
+            "Panels": [
+                {
+                    "Name": "Panel1",
+                    "Type": "",
+                    "Color": "",
+                    "ModelPosition": "-1.4, -1.7, 0",
+                    "ModelRotation": "0, 0, -25",
+                    "ModelScale": "1, 1, 1"
+                }
+            ],
             "PieceEvents": [
                 {
                     "Name": "E4",
@@ -98,5 +80,6 @@
                 }
             ]
         }
-    ]
+    ],
+    "TrackedToolboxTags": []
 }

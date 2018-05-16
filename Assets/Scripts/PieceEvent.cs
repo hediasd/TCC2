@@ -21,10 +21,6 @@ public class PieceEvent : LoadableResource {
         //LoadActions();
     }
 
-    public void PlayActions(){
-
-    }
-
     public void FullyLoad(){
 
         PieceActions = new List<PieceAction>();

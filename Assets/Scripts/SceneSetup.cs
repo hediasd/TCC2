@@ -6,10 +6,12 @@ using UnityEngine;
 public class SceneSetup : LoadableResource {
 
 	//public string TrackedTags = "Tomate, Salada";
-	public List<TrackedTag> TrackedTags;
+	public List<TrackedAnimationTag> TrackedAnimationTags;
+	public List<TrackedToolboxTag> TrackedToolboxTags;
 
 	public SceneSetup(){
-		TrackedTags = new List<TrackedTag>();
+		TrackedAnimationTags = new List<TrackedAnimationTag>();
+		TrackedToolboxTags	 = new List<TrackedToolboxTag>();
 		//TrackedTags.Add(new TrackedTag());
 		//TrackedTags.Add(new TrackedTag());
 		//TrackedTags.Add(new TrackedTag());
