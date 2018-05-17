@@ -31,6 +31,8 @@ public class ResourcesMaster : MonoBehaviour
 
     public static Dictionary<string, Material> Materials;
 
+    public static GameObject PanelBase;
+
     void Start()
     {
 
@@ -51,7 +53,7 @@ public class ResourcesMaster : MonoBehaviour
         }
 		//ResourcesMaster.WriteUp("PieceActions", lcsp);
 
-        SceneSetup = ResourcesMaster.JsonToObject<SceneSetup>("SceneSetup_Bicicleta");
+        SceneSetup = ResourcesMaster.JsonToObject<SceneSetup>("SceneSetup_Torno");
         string sss = ResourcesMaster.ObjectToJson<SceneSetup>(SceneSetup);
         ResourcesMaster.WriteUp("SceneSetupBackup", sss);
 
@@ -66,6 +68,10 @@ public class ResourcesMaster : MonoBehaviour
                 Model.FullyLoad();
             }
         }
+
+        
+
+
         //
 
         

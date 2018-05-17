@@ -1,6 +1,61 @@
 {
-    "Name": "BicycleScene",
+    "Name": "BasicScene",
     "TrackedAnimationTags": [
+        {
+            "Name": "Salada",
+            "Models": [],
+            "Panels": [
+                {
+                    "Name": "Panel1",
+                    "Type": "",
+                    "Color": "",
+                    "ModelPosition": "3.5, -0.23, 1.5",
+                    "ModelRotation": "0, 0, 16",
+                    "ModelScale": "1, 1, 1"
+                }
+            ],
+            "PieceEvents": [
+                {
+                    "Name": "E1",
+                    "ComponentNames": "montaj-gezer punta",
+                    "SubComponentNames": "gezer punta - tekerlek_1-1",
+                    "Actions": "A1",
+                    "Requisites": "",
+                    "Description": [
+                        {
+                            "PanelName": "Panel1",
+                            "Text": "Gire o (222) Volante MBV-95 no sentido anti-horário para soltar a trava."
+                        }
+                    ]
+                },
+                {
+                    "Name": "E2",
+                    "ComponentNames": "montaj-gezer punta",
+                    "SubComponentNames": "APERTO-PONTO-1",
+                    "Actions": "A2",
+                    "Requisites": "",
+                    "Description": [
+                        {
+                            "PanelName": "Panel1",
+                            "Text": "Gire o (217) Manipulo da Trava do Mangote no sentido anti-horário para destravar o mangote."
+                        }
+                    ]
+                },
+                {
+                    "Name": "E3",
+                    "ComponentNames": "montaj-gezer punta",
+                    "SubComponentNames": "gezer punta - mil-1",
+                    "Actions": "A3",
+                    "Requisites": "",
+                    "Description": [
+                        {
+                            "PanelName": "Panel1",
+                            "Text": "Retire o (214) Mangote de seu compartimento no cabeçote móvel."
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "Name": "Tomate",
             "Models": [],
@@ -12,42 +67,32 @@
                     "ModelPosition": "-1.4, -1.7, 0",
                     "ModelRotation": "0, 0, -25",
                     "ModelScale": "1, 1, 1"
-                },
-                {
-                    "Name": "Panel2",
-                    "Type": "",
-                    "Color": "",
-                    "ModelPosition": "2.6, -1.7, 0",
-                    "ModelRotation": "0, 0, 30",
-                    "ModelScale": "1, 1, 1"
                 }
             ],
             "PieceEvents": [
                 {
-                    "Name": "E1",
-                    "ComponentNames": "BARRA",
-                    "SubComponentNames": "P2",
-                    "Actions": "RY10",
+                    "Name": "E4",
+                    "ComponentNames": "MONTAGEM-TORRE-1",
+                    "SubComponentNames": "araba4_1-1",
+                    "Actions": "A1",
                     "Requisites": "",
-                    "Description": [
-                        {
-                            "PanelName": "Panel1",
-                            "Text": "Gire o parafuso para soltar a peça do eixo."
-                        }
-                    ]
+                    "Description": []
                 },
                 {
-                    "Name": "E2",
-                    "ComponentNames": "BARRA",
-                    "SubComponentNames": "P2",
-                    "Actions": "MY10",
+                    "Name": "E5",
+                    "ComponentNames": "MONTAGEM-TORRE-1",
+                    "SubComponentNames": "araba4_1-2",
+                    "Actions": "A1",
                     "Requisites": "",
-                    "Description": [
-                        {
-                            "PanelName": "Panel1",
-                            "Text": "Retire o parafuso e a peça para soltar o banco."
-                        }
-                    ]
+                    "Description": []
+                },
+                {
+                    "Name": "E6",
+                    "ComponentNames": "MONTAGEM-TORRE-1",
+                    "SubComponentNames": "kalemlik_1-1",
+                    "Actions": "A3",
+                    "Requisites": "",
+                    "Description": []
                 }
             ]
         },
@@ -66,17 +111,28 @@
             ],
             "PieceEvents": [
                 {
-                    "Name": "E4",
-                    "ComponentNames": "BANCO",
-                    "SubComponentNames": "B",
+                    "Name": "E7",
+                    "ComponentNames": "ESTRUTURA-TORNO-1",
+                    "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "A1",
                     "Requisites": "",
-                    "Description": [
-                        {
-                            "PanelName": "Panel1",
-                            "Text": "Remova o banco."
-                        }
-                    ]
+                    "Description": []
+                },
+                {
+                    "Name": "E8",
+                    "ComponentNames": "ESTRUTURA-TORNO-1",
+                    "SubComponentNames": "gezer punta - mil-1",
+                    "Actions": "A1",
+                    "Requisites": "",
+                    "Description": []
+                },
+                {
+                    "Name": "E9",
+                    "ComponentNames": "ESTRUTURA-TORNO-1",
+                    "SubComponentNames": "gezer punta - mil-1",
+                    "Actions": "A1",
+                    "Requisites": "",
+                    "Description": []
                 }
             ]
         }

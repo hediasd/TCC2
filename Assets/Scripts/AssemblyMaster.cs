@@ -20,6 +20,9 @@ public class AssemblyMaster : MonoBehaviour {
 
 	void Start(){
 
+		//PanelBase = Resources.Load("Models/BluePanel", typeof(GameObject)) as GameObject;
+		PanelBase = GameObject.Find("BluePanel");//.PanelBase;
+
 		LoadedSceneSetup = ResourcesMaster.SceneSetup;
 		GetComponent<SetupHolder>().SceneSetup = LoadedSceneSetup;
 
@@ -60,17 +63,17 @@ public class AssemblyMaster : MonoBehaviour {
 					NewPanel.transform.localScale = Panel.ModelScaleVector;
 				}
 
-				Transform Models = ChildModel.transform.Find("Models");
-				foreach (PieceModel Model in TkAnimationTag.Models){
-					GameObject NewModel = Instantiate(PanelBase, Models);
-					NewModel.name = Model.Name;
-					NewModel.transform.localPosition = Model.ModelPositionVector;
-					NewModel.transform.localRotation = Model.ModelRotationVector;
-					NewModel.transform.localScale = Model.ModelScaleVector;
-				}
+				//Transform Models = ChildModel.transform.Find("Models");
+				//foreach (PieceModel Model in TkAnimationTag.Models){
+				//	GameObject NewModel = Instantiate(PanelBase, Models);
+				//	NewModel.name = Model.Name;
+				//	NewModel.transform.localPosition = Model.ModelPositionVector;
+				//	NewModel.transform.localRotation = Model.ModelRotationVector;
+				//	NewModel.transform.localScale = Model.ModelScaleVector;
+				//}
 				
 				PEM.FullyLoad(TkAnimationTag.PieceEvents);
-				//Debug.Log(PEM.PieceEvents.Count);
+				Debug.Log(PEM.PieceEvents.Count);
 				PieceEventManagers.Add(PEM);
 
 			}
@@ -91,6 +94,14 @@ public class AssemblyMaster : MonoBehaviour {
 	void Update () {
 
 		
+	}
+
+	public void SetSize(float n){
+		for (int i = 0; i < 3; i++)//ModelsFather.transform.childCount
+		{
+			Transform Model = ModelsFather.GetChild(i);
+			Model.localScale = new Vector3(n, n, n);			
+		}
 	}
 
 	public void PreviousEvent(PieceEventManager PVE){

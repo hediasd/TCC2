@@ -1,6 +1,6 @@
 {
     "Name": "BasicScene",
-    "TrackedTags": [
+    "TrackedAnimationTags": [
         {
             "Name": "Salada",
             "Models": [],
@@ -9,8 +9,8 @@
                     "Name": "Panel1",
                     "Type": "",
                     "Color": "",
-                    "ModelPosition": "-1.4, -1.7, 0",
-                    "ModelRotation": "0, 0, -25",
+                    "ModelPosition": "3.5, -0.23, 1.5",
+                    "ModelRotation": "0, 0, 16",
                     "ModelScale": "1, 1, 1"
                 }
             ],
@@ -21,7 +21,12 @@
                     "SubComponentNames": "gezer punta - tekerlek_1-1",
                     "Actions": "A1",
                     "Requisites": "",
-                    "Description": "Gire o (222) Volante MBV-95 no sentido anti-horário para soltar a trava."
+                    "Description": [
+                        {
+                            "PanelName": "Panel1",
+                            "Text": "Gire o (222) Volante MBV-95 no sentido anti-horário para soltar a trava."
+                        }
+                    ]
                 },
                 {
                     "Name": "E2",
@@ -29,7 +34,12 @@
                     "SubComponentNames": "APERTO-PONTO-1",
                     "Actions": "A2",
                     "Requisites": "",
-                    "Description": "Gire o (217) Manipulo da Trava do Mangote no sentido anti-horário para destravar o mangote."
+                    "Description": [
+                        {
+                            "PanelName": "Panel1",
+                            "Text": "Gire o (217) Manipulo da Trava do Mangote no sentido anti-horário para destravar o mangote."
+                        }
+                    ]
                 },
                 {
                     "Name": "E3",
@@ -37,7 +47,12 @@
                     "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "A3",
                     "Requisites": "",
-                    "Description": "Retire o (214) Mangote de seu compartimento no cabeçote móvel."
+                    "Description": [
+                        {
+                            "PanelName": "Panel1",
+                            "Text": "Retire o (214) Mangote de seu compartimento no cabeçote móvel."
+                        }
+                    ]
                 }
             ]
         },
@@ -60,26 +75,29 @@
                     "ComponentNames": "MONTAGEM-TORRE-1",
                     "SubComponentNames": "araba4_1-1",
                     "Actions": "A1",
-                    "Requisites": ""
+                    "Requisites": "",
+                    "Description": []
                 },
                 {
                     "Name": "E5",
                     "ComponentNames": "MONTAGEM-TORRE-1",
                     "SubComponentNames": "araba4_1-2",
                     "Actions": "A1",
-                    "Requisites": ""
+                    "Requisites": "",
+                    "Description": []
                 },
                 {
                     "Name": "E6",
                     "ComponentNames": "MONTAGEM-TORRE-1",
                     "SubComponentNames": "kalemlik_1-1",
                     "Actions": "A3",
-                    "Requisites": ""
+                    "Requisites": "",
+                    "Description": []
                 }
             ]
         },
         {
-            "Name": "Abacate",
+            "Name": "Alface",
             "Models": [],
             "Panels": [
                 {
@@ -96,24 +114,28 @@
                     "Name": "E7",
                     "ComponentNames": "ESTRUTURA-TORNO-1",
                     "SubComponentNames": "gezer punta - mil-1",
-                    "Actions": "",
-                    "Requisites": ""
+                    "Actions": "A1",
+                    "Requisites": "",
+                    "Description": []
                 },
                 {
                     "Name": "E8",
                     "ComponentNames": "ESTRUTURA-TORNO-1",
                     "SubComponentNames": "gezer punta - mil-1",
-                    "Actions": "",
-                    "Requisites": ""
+                    "Actions": "A1",
+                    "Requisites": "",
+                    "Description": []
                 },
                 {
                     "Name": "E9",
                     "ComponentNames": "ESTRUTURA-TORNO-1",
                     "SubComponentNames": "gezer punta - mil-1",
-                    "Actions": "",
-                    "Requisites": ""
+                    "Actions": "A1",
+                    "Requisites": "",
+                    "Description": []
                 }
             ]
         }
-    ]
+    ],
+    "TrackedToolboxTags": []
 }
