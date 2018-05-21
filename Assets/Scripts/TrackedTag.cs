@@ -24,14 +24,19 @@ public class TrackedAnimationTag : TrackedTag {
 		Models = new List<PieceModel>();
 		Panels = new List<PieceModel>();
 		PieceEvents = new List<PieceEvent>();
-		//PieceEvents.Add(new PieceEvent());
-		//PieceEvents.Add(new PieceEvent());
 	}
 
 }
 
 [System.Serializable]
 public class TrackedToolboxTag : TrackedTag {
+
+	public List<PieceModel> Models, Panels;
+
+	public TrackedToolboxTag(){
+		Models = new List<PieceModel>();
+		Panels = new List<PieceModel>();
+	}
 
 }
 
