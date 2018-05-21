@@ -20,7 +20,7 @@
                     "ComponentNames": "montaj-gezer punta",
                     "SubComponentNames": "gezer punta - tekerlek_1-1",
                     "Actions": "A1",
-                    "Requisites": "",
+                    "ToolboxElements": "Chave de Boca",
                     "Description": [
                         {
                             "PanelName": "Panel1",
@@ -33,7 +33,7 @@
                     "ComponentNames": "montaj-gezer punta",
                     "SubComponentNames": "APERTO-PONTO-1",
                     "Actions": "A2",
-                    "Requisites": "",
+                    "ToolboxElements": "Chave Phillips",
                     "Description": [
                         {
                             "PanelName": "Panel1",
@@ -46,7 +46,7 @@
                     "ComponentNames": "montaj-gezer punta",
                     "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "A3",
-                    "Requisites": "",
+                    "ToolboxElements": "",
                     "Description": [
                         {
                             "PanelName": "Panel1",
@@ -75,7 +75,7 @@
                     "ComponentNames": "MONTAGEM-TORRE-1",
                     "SubComponentNames": "araba4_1-1",
                     "Actions": "A1",
-                    "Requisites": "",
+                    "ToolboxElements": "",
                     "Description": []
                 },
                 {
@@ -83,7 +83,7 @@
                     "ComponentNames": "MONTAGEM-TORRE-1",
                     "SubComponentNames": "araba4_1-2",
                     "Actions": "A1",
-                    "Requisites": "",
+                    "ToolboxElements": "",
                     "Description": []
                 },
                 {
@@ -91,7 +91,7 @@
                     "ComponentNames": "MONTAGEM-TORRE-1",
                     "SubComponentNames": "kalemlik_1-1",
                     "Actions": "A3",
-                    "Requisites": "",
+                    "ToolboxElements": "",
                     "Description": []
                 }
             ]
@@ -115,7 +115,7 @@
                     "ComponentNames": "ESTRUTURA-TORNO-1",
                     "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "A1",
-                    "Requisites": "",
+                    "ToolboxElements": "Chave de Boca",
                     "Description": []
                 },
                 {
@@ -123,7 +123,7 @@
                     "ComponentNames": "ESTRUTURA-TORNO-1",
                     "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "A1",
-                    "Requisites": "",
+                    "ToolboxElements": "Chave Phillips",
                     "Description": []
                 },
                 {
@@ -131,11 +131,45 @@
                     "ComponentNames": "ESTRUTURA-TORNO-1",
                     "SubComponentNames": "gezer punta - mil-1",
                     "Actions": "A1",
-                    "Requisites": "",
+                    "ToolboxElements": "",
                     "Description": []
                 }
             ]
         }
     ],
-    "TrackedToolboxTags": []
+    "TrackedToolboxTags": [
+        {
+            "Name": "Abacate",
+            "Tools": [
+                {
+                    "Name": "Chave de Boca",
+                    "Models": [],
+                    "Panels": [
+                        {
+                            "Name": "PanelChB",
+                            "Type": "",
+                            "Color": "",
+                            "ModelPosition": "-1.4, -1.7, 0",
+                            "ModelRotation": "0, 0, -25",
+                            "ModelScale": "1, 1, 1"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Chave Phillips",
+                    "Models": [],
+                    "Panels": [
+                        {
+                            "Name": "PanelChP",
+                            "Type": "",
+                            "Color": "",
+                            "ModelPosition": "-1.4, -1.7, 0",
+                            "ModelRotation": "0, 0, -25",
+                            "ModelScale": "1, 1, 1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

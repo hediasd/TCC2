@@ -31,11 +31,12 @@ public class TrackedAnimationTag : TrackedTag {
 [System.Serializable]
 public class TrackedToolboxTag : TrackedTag {
 
-	public List<PieceModel> Models, Panels;
+	public List<PieceTool> Tools;//Models, Panels;
 
 	public TrackedToolboxTag(){
-		Models = new List<PieceModel>();
-		Panels = new List<PieceModel>();
+		Tools = new List<PieceTool>();
+		Tools.Add(new PieceTool());
+		Tools.Add(new PieceTool());
 	}
 
 }

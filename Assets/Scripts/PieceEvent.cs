@@ -8,7 +8,7 @@ using UnityEngine;
 public class PieceEvent : LoadableResource {
 
     public string ComponentNames, SubComponentNames;
-    public string Actions, Requisites;
+    public string Actions, ToolboxElements;
 
     public List<PanelText> Description;
 

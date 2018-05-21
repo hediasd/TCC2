@@ -5,10 +5,10 @@ using Vuforia;
 
 public class AssemblyMaster : MonoBehaviour {
 
-	PiecesMaster PiecesMaster;
 	Transform ModelsFather;
 
 	public List<PieceEventManager> PieceEventManagers;
+	public List<ToolboxManager> ToolboxManagers;
 	public static int ManagersIndex = 0;
 	PieceEvent OngoingGlobalEvent;
 
@@ -21,7 +21,7 @@ public class AssemblyMaster : MonoBehaviour {
 	void Start(){
 
 		//PanelBase = Resources.Load("Models/BluePanel", typeof(GameObject)) as GameObject;
-		PanelBase = GameObject.Find("BluePanel");//.PanelBase;
+		//PanelBase = GameObject.Find("BluePanel");//.PanelBase;
 
 		LoadedSceneSetup = ResourcesMaster.SceneSetup;
 		GetComponent<SetupHolder>().SceneSetup = LoadedSceneSetup;
@@ -33,7 +33,6 @@ public class AssemblyMaster : MonoBehaviour {
 		ModelsFather = GameObject.Find("ModelsFather").transform;
 
 		PieceEventManagers = new List<PieceEventManager>();
-		PiecesMaster = GetComponent<PiecesMaster>();
 
 		for (int i = 0; i < ModelsFather.childCount; i++)
 		{
@@ -78,7 +77,24 @@ public class AssemblyMaster : MonoBehaviour {
 
 			}
 			if(TkToolboxTag != null){
-				//TM = ChildModel.AddComponent<ToolboxManager>();	
+				
+				ToolboxManager TM = ChildModel.AddComponent<ToolboxManager>();	
+				TM.Enableds(Models: false);
+				ToolboxManagers.Add(TM);
+
+				Transform PanelsFather = ChildModel.transform.Find("Panels");
+				foreach (PieceTool Tool in TkToolboxTag.Tools)
+				{
+					foreach (PieceModel Panel in Tool.Panels)
+					{
+						GameObject NewPanel = Instantiate(PanelBase, PanelsFather);
+						NewPanel.name = Panel.Name;
+						NewPanel.transform.localPosition = Panel.ModelPositionVector;
+						NewPanel.transform.localRotation = Panel.ModelRotationVector;
+						NewPanel.transform.localScale = Panel.ModelScaleVector;
+					}					
+				}
+
 			}
 
 			
@@ -111,7 +127,7 @@ public class AssemblyMaster : MonoBehaviour {
 		if(PVE.Index > 0) {
 			try{
 				PVE.Index--;
-				PVE.ManagerPlayEvent();
+				PlayEvent(PVE);
 			}catch(Exception e){
 				PVE.Index = safetyIndex;
 				Debug.Log(e.Message);
@@ -125,6 +141,12 @@ public class AssemblyMaster : MonoBehaviour {
 
 	public void PlayEvent(PieceEventManager PVE){
 		PVE.ManagerPlayEvent();
+		foreach (ToolboxManager Toolbox in ToolboxManagers)
+		{
+			Toolbox.Enableds(Models: false);
+			Toolbox.EnableTool(PVE.OngoingManagerEvent.ToolboxElements, true);
+		}
+
 	}
 
 	public void NextEvent(PieceEventManager PVE){
@@ -134,7 +156,7 @@ public class AssemblyMaster : MonoBehaviour {
 		if(PVE.Index < PVE.MaxIndex) {
 			try{
 				PVE.Index++;
-				PVE.ManagerPlayEvent();
+				PlayEvent(PVE);
 			}catch(Exception e){
 				PVE.Index = safetyIndex;
 				Debug.Log(e.Message);
