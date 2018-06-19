@@ -20,15 +20,11 @@ public class AssemblyMaster : MonoBehaviour {
 
 	void Start(){
 
-		//PanelBase = Resources.Load("Models/BluePanel", typeof(GameObject)) as GameObject;
-		//PanelBase = GameObject.Find("BluePanel");//.PanelBase;
-
 		LoadedSceneSetup = ResourcesMaster.SceneSetup;
 		GetComponent<SetupHolder>().SceneSetup = LoadedSceneSetup;
 
 		TrackedAnimationTags = new List<TrackedAnimationTag>(LoadedSceneSetup.TrackedAnimationTags);
 		TrackedToolboxTags = new List<TrackedToolboxTag>(LoadedSceneSetup.TrackedToolboxTags);
-
 
 		ModelsFather = GameObject.Find("ModelsFather").transform;
 
@@ -105,11 +101,6 @@ public class AssemblyMaster : MonoBehaviour {
 
 		PlayEvent(PieceEventManagers[0]);
 
-	}
-	
-	void Update () {
-
-		
 	}
 
 	public void SetSize(float n){
