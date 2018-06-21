@@ -64,8 +64,8 @@
                     "Name": "Panel1",
                     "Type": "",
                     "Color": "",
-                    "ModelPosition": "-1.4, -1.7, 0",
-                    "ModelRotation": "0, 0, -25",
+                    "ModelPosition": "-1.7, -1.7, 0",
+                    "ModelRotation": "0, 0, -15",
                     "ModelScale": "1, 1, 1"
                 }
             ],
@@ -76,7 +76,12 @@
                     "SubComponentNames": "araba4_1-1",
                     "Actions": "A1",
                     "ToolboxElements": "",
-                    "Description": []
+                    "Description": [
+                        {
+                            "PanelName": "Panel1",
+                            "Text": "Retire o (214) Mangote de seu compartimento no cabeçote móvel."
+                        }
+                    ]
                 },
                 {
                     "Name": "E5",
@@ -84,7 +89,12 @@
                     "SubComponentNames": "araba4_1-2",
                     "Actions": "A1",
                     "ToolboxElements": "",
-                    "Description": []
+                    "Description": [
+                        {
+                            "PanelName": "Panel1",
+                            "Text": "Retire o (214) Mangote de seu compartimento no cabeçote móvel."
+                        }
+                    ]
                 },
                 {
                     "Name": "E6",
@@ -92,7 +102,12 @@
                     "SubComponentNames": "kalemlik_1-1",
                     "Actions": "A3",
                     "ToolboxElements": "",
-                    "Description": []
+                    "Description": [
+                        {
+                            "PanelName": "Panel1",
+                            "Text": "Retire o (214) Mangote de seu compartimento no cabeçote móvel."
+                        }
+                    ]
                 }
             ]
         },

@@ -12,14 +12,14 @@ public class PiecesMaster : MonoBehaviour {
 
 	void Start() {
 
-		ModelsFather = GameObject.Find("ModelsFather").transform;
-		Object TagBase = Resources.Load("Models/TagBase2");
-		Object ButtonsBase = Resources.Load("Models/ButtonsBase");
+	//	ModelsFather = GameObject.Find("ModelsFather").transform;
+	//	Object TagBase = Resources.Load("Models/TagBase2");
+	//	Object ButtonsBase = Resources.Load("Models/ButtonsBase");
 
-		for (int i = 0; i < ModelsFather.transform.childCount; i++)
-		{
+	//	for (int i = 0; i < ModelsFather.transform.childCount; i++)
+	//	{
 			//TargetedModels.Add(ModelsFather.GetChild(i).gameObject.name, ModelsFather.GetChild(i).gameObject);
-		}
+	//	}
 
 
 

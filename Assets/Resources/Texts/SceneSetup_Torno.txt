@@ -64,8 +64,8 @@
                     "Name": "Panel1",
                     "Type": "",
                     "Color": "",
-                    "ModelPosition": "-1.4, -1.7, 0",
-                    "ModelRotation": "0, 0, -25",
+                    "ModelPosition": "-1.7, -1.7, 0",
+                    "ModelRotation": "0, 0, -15",
                     "ModelScale": "1, 1, 1"
                 }
             ],
@@ -76,24 +76,40 @@
                     "SubComponentNames": "araba4_1-1",
                     "Actions": "A1",
                     "ToolboxElements": "",
-                    "Description": []
+                    "Description": [
+                        {
+                            "PanelName": "Panel1",
+                            "Text": "Gire o (193) Volante do Carro Longitudinal para solta-lo."
+                        }
+                    ]
                 },
                 {
                     "Name": "E5",
                     "ComponentNames": "MONTAGEM-TORRE-1",
-                    "SubComponentNames": "araba4_1-2",
-                    "Actions": "A1",
+                    "SubComponentNames": "araba4_1-1",
+                    "Actions": "A3",
                     "ToolboxElements": "",
-                    "Description": []
+                    "Description": [
+                        {
+                            "PanelName": "Panel1",
+                            "Text": "Separe com cuidado o (193) Volante do resto do equipamento."
+                        }
+                    ]
                 },
                 {
                     "Name": "E6",
                     "ComponentNames": "MONTAGEM-TORRE-1",
-                    "SubComponentNames": "kalemlik_1-1",
+                    "SubComponentNames": "kalemlik_1-1/tak_m montaj-1/vida_1-1/vida_1-2/vida_1-3/vida_1-4/vida_1-5/vida_1-6/vida_1-7/vida_1-8",
                     "Actions": "A3",
                     "ToolboxElements": "",
-                    "Description": []
-                }
+                    "Description": [
+                        {
+                            "PanelName": "Panel1",
+                            "Text": " "
+                        }
+                    ]
+                },
+
             ]
         },
         {

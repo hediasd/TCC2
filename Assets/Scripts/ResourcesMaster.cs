@@ -24,10 +24,6 @@ public class ResourcesMaster : MonoBehaviour
     public static SceneSetup SceneSetup;
 
 
-    public static Dictionary<string, PieceModelObject> PieceModelObjectsDictionary;
-    public static Dictionary<string, PieceModelTextPanel> PieceModelTextPanelsDictionary;
-
-    public static Dictionary<string, TrackedAnimationTag> TrackedTagsDictionary;
 
     public static Dictionary<string, Material> Materials;
 
