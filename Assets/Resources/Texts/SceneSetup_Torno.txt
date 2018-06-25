@@ -50,7 +50,7 @@
                     "Description": [
                         {
                             "PanelName": "Panel1",
-                            "Text": "Retire o (214) Mangote de seu compartimento no cabeçote móvel."
+                            "Text": "Retire o (214) Mangote de seu ponto no cabeçote móvel."
                         }
                     ]
                 }
@@ -61,11 +61,11 @@
             "Models": [],
             "Panels": [
                 {
-                    "Name": "Panel1",
+                    "Name": "Panel2",
                     "Type": "",
                     "Color": "",
-                    "ModelPosition": "-1.7, -1.7, 0",
-                    "ModelRotation": "0, 0, -15",
+                    "ModelPosition": "-1.0, 0.45, 1.6",
+                    "ModelRotation": "-70, 0, 0",
                     "ModelScale": "1, 1, 1"
                 }
             ],
@@ -78,7 +78,7 @@
                     "ToolboxElements": "",
                     "Description": [
                         {
-                            "PanelName": "Panel1",
+                            "PanelName": "Panel2",
                             "Text": "Gire o (193) Volante do Carro Longitudinal para solta-lo."
                         }
                     ]
@@ -91,7 +91,7 @@
                     "ToolboxElements": "",
                     "Description": [
                         {
-                            "PanelName": "Panel1",
+                            "PanelName": "Panel2",
                             "Text": "Separe com cuidado o (193) Volante do resto do equipamento."
                         }
                     ]
@@ -99,55 +99,30 @@
                 {
                     "Name": "E6",
                     "ComponentNames": "MONTAGEM-TORRE-1",
-                    "SubComponentNames": "kalemlik_1-1/tak_m montaj-1/vida_1-1/vida_1-2/vida_1-3/vida_1-4/vida_1-5/vida_1-6/vida_1-7/vida_1-8",
-                    "Actions": "A3",
+                    "SubComponentNames": "head",
+                    "Actions": "A4",
                     "ToolboxElements": "",
                     "Description": [
                         {
-                            "PanelName": "Panel1",
-                            "Text": " "
+                            "PanelName": "Panel2",
+                            "Text": "Retire os parafusos da torre do Carro Longitudinal."
                         }
                     ]
-                },
-
+                }
             ]
         },
         {
             "Name": "Alface",
             "Models": [],
             "Panels": [
-                {
-                    "Name": "Panel1",
-                    "Type": "",
-                    "Color": "",
-                    "ModelPosition": "-1.4, -1.7, 0",
-                    "ModelRotation": "0, 0, -25",
-                    "ModelScale": "1, 1, 1"
-                }
             ],
             "PieceEvents": [
                 {
                     "Name": "E7",
-                    "ComponentNames": "ESTRUTURA-TORNO-1",
-                    "SubComponentNames": "gezer punta - mil-1",
+                    "ComponentNames": "BARRAMENTO",
+                    "SubComponentNames": "ayna-1",
                     "Actions": "A1",
                     "ToolboxElements": "Chave de Boca",
-                    "Description": []
-                },
-                {
-                    "Name": "E8",
-                    "ComponentNames": "ESTRUTURA-TORNO-1",
-                    "SubComponentNames": "gezer punta - mil-1",
-                    "Actions": "A1",
-                    "ToolboxElements": "Chave Phillips",
-                    "Description": []
-                },
-                {
-                    "Name": "E9",
-                    "ComponentNames": "ESTRUTURA-TORNO-1",
-                    "SubComponentNames": "gezer punta - mil-1",
-                    "Actions": "A1",
-                    "ToolboxElements": "",
                     "Description": []
                 }
             ]

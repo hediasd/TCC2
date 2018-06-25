@@ -22,6 +22,8 @@ public class AssemblyMaster : MonoBehaviour
     void Start()
     {
 
+        PanelBase = Resources.Load<GameObject>("Models/BluePanel"); 
+        //GameObject.Find("BluePanel");//
         LoadedSceneSetup = ResourcesMaster.SceneSetup;
         GetComponent<SetupHolder>().SceneSetup = LoadedSceneSetup;
 
@@ -103,6 +105,8 @@ public class AssemblyMaster : MonoBehaviour
 
         PieceEventManagers[0].Enableds(Models: true, Buttons: true, Warnings: false);
         OngoingGlobalEvent = PieceEventManagers[0].OngoingManagerEvent;
+
+        Debug.Log("PEM amount: " + PieceEventManagers.Count);
 
         PlayEvent(PieceEventManagers[0]);
 

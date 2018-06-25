@@ -23,10 +23,10 @@
         },
         {
             "Name": "A4",
-            "RotationAmount": "40, 0, 0",
+            "RotationAmount": "0, 0, 0",
             "RotationTime": "3",
-            "TranslationAmount": "0, 0, 0",
-            "TranslationTime": "5"
+            "TranslationAmount": "0, 0, 10",
+            "TranslationTime": "3"
         },
         {
             "Name": "MY10",

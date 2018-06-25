@@ -6,8 +6,8 @@ public class StepUpdater : MonoBehaviour {
 
 	TextMesh TextMesh;
 	AssemblyMaster AssemblyMaster;
-	string GoalStep = "X";
-	string CurrentStep = "Y";
+	string GoalStep = "B9";
+	string CurrentStep = "E1";
 
 	void Start(){
 		AssemblyMaster = GameObject.Find("Logic").GetComponent<AssemblyMaster>();
@@ -18,6 +18,6 @@ public class StepUpdater : MonoBehaviour {
 
 	void Update () {
 		CurrentStep = AssemblyMaster.PieceEventManagers[AssemblyMaster.ManagersIndex].OngoingManagerEvent.Name;
-		TextMesh.text = "Etapa : " + CurrentStep + "\nEtapa Atual : " + GoalStep;
+		TextMesh.text = "Etapa : " + GoalStep + "\nEtapa Atual : " + CurrentStep;
 	}
 }
